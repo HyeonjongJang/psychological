@@ -1,0 +1,2531 @@
+All Assessments Complete!
+
+Thank you for participating in this research study.
+
+View Results
+
+
+
+이제 여기까지는 되는데, View Results를 누르면 
+
+Error
+
+Failed to fetch
+
+
+
+Return to Hub
+
+이런 오류가 발생해. 
+
+
+
+==> Setting WEB_CONCURRENCY=1 by default, based on available CPUs in the instance
+
+
+
+==> Deploying...
+
+
+
+==> Running 'uvicorn app.main:app --host 0.0.0.0 --port $PORT'
+
+
+
+==> No open ports detected, continuing to scan...
+
+
+
+==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+
+
+
+INFO:     Started server process [59]
+
+
+
+INFO:     Waiting for application startup.
+
+
+
+2025-12-25 14:57:31,614 INFO sqlalchemy.engine.Engine select pg_catalog.version()
+
+
+
+2025-12-25 14:57:31,614 INFO sqlalchemy.engine.Engine [raw sql] ()
+
+
+
+2025-12-25 14:57:31,620 INFO sqlalchemy.engine.Engine select current_schema()
+
+
+
+2025-12-25 14:57:31,620 INFO sqlalchemy.engine.Engine [raw sql] ()
+
+
+
+2025-12-25 14:57:31,624 INFO sqlalchemy.engine.Engine show standard_conforming_strings
+
+
+
+2025-12-25 14:57:31,624 INFO sqlalchemy.engine.Engine [raw sql] ()
+
+
+
+2025-12-25 14:57:31,626 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+
+
+
+2025-12-25 14:57:31,631 INFO sqlalchemy.engine.Engine SELECT pg_catalog.pg_class.relname 
+
+
+
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+
+
+
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+
+
+
+2025-12-25 14:57:31,631 INFO sqlalchemy.engine.Engine [generated in 0.00030s] ('participants', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+
+
+
+2025-12-25 14:57:31,635 INFO sqlalchemy.engine.Engine SELECT pg_catalog.pg_class.relname 
+
+
+
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+
+
+
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+
+
+
+2025-12-25 14:57:31,635 INFO sqlalchemy.engine.Engine [cached since 0.00441s ago] ('assessment_sessions', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+
+
+
+2025-12-25 14:57:31,636 INFO sqlalchemy.engine.Engine SELECT pg_catalog.pg_class.relname 
+
+
+
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+
+
+
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+
+
+
+2025-12-25 14:57:31,636 INFO sqlalchemy.engine.Engine [cached since 0.005395s ago] ('item_responses', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+
+
+
+2025-12-25 14:57:31,696 INFO sqlalchemy.engine.Engine SELECT pg_catalog.pg_class.relname 
+
+
+
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+
+
+
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+
+
+
+2025-12-25 14:57:31,696 INFO sqlalchemy.engine.Engine [cached since 0.06555s ago] ('chat_logs', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+
+
+
+2025-12-25 14:57:31,697 INFO sqlalchemy.engine.Engine SELECT pg_catalog.pg_class.relname 
+
+
+
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+
+
+
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+
+
+
+2025-12-25 14:57:31,698 INFO sqlalchemy.engine.Engine [cached since 0.06666s ago] ('assessment_results', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+
+
+
+2025-12-25 14:57:31,699 INFO sqlalchemy.engine.Engine SELECT pg_catalog.pg_class.relname 
+
+
+
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+
+
+
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+
+
+
+2025-12-25 14:57:31,699 INFO sqlalchemy.engine.Engine [cached since 0.06853s ago] ('satisfaction_surveys', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+
+
+
+2025-12-25 14:57:31,703 INFO sqlalchemy.engine.Engine SELECT pg_catalog.pg_type.typname 
+
+
+
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+
+
+
+WHERE pg_catalog.pg_type.typname = $1::VARCHAR AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != $2::VARCHAR
+
+
+
+2025-12-25 14:57:31,703 INFO sqlalchemy.engine.Engine [generated in 0.00017s] ('sessiontype', 'pg_catalog')
+
+
+
+2025-12-25 14:57:31,706 INFO sqlalchemy.engine.Engine SELECT pg_catalog.pg_type.typname 
+
+
+
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+
+
+
+WHERE pg_catalog.pg_type.typname = $1::VARCHAR AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != $2::VARCHAR
+
+
+
+2025-12-25 14:57:31,706 INFO sqlalchemy.engine.Engine [cached since 0.003391s ago] ('sessionstatus', 'pg_catalog')
+
+
+
+2025-12-25 14:57:31,707 INFO sqlalchemy.engine.Engine COMMIT
+
+
+
+INFO:     Application startup complete.
+
+
+
+INFO:     Uvicorn running on http://0.0.0.0:10000 (Press CTRL+C to quit)
+
+
+
+INFO:     127.0.0.1:41290 - "HEAD / HTTP/1.1" 405 Method Not Allowed
+
+
+
+==> Your service is live 🎉
+
+
+
+==> 
+
+
+
+==> ///////////////////////////////////////////////////////////
+
+
+
+==> 
+
+
+
+==> Available at your primary URL https://psychological.onrender.com
+
+
+
+==> 
+
+
+
+==> ///////////////////////////////////////////////////////////
+
+
+
+INFO:     34.83.77.94:0 - "GET / HTTP/1.1" 200 OK
+
+
+
+2025-12-25 14:57:56,656 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+
+
+
+2025-12-25 14:57:56,700 INFO sqlalchemy.engine.Engine SELECT participants.id, participants.participant_code, participants.age, participants.gender, participants.education_level, participants.latin_square_row, participants.condition_order, participants.created_at, participants.updated_at 
+
+
+
+FROM participants
+
+
+
+2025-12-25 14:57:56,700 INFO sqlalchemy.engine.Engine [generated in 0.00023s] ()
+
+
+
+2025-12-25 14:57:56,705 INFO sqlalchemy.engine.Engine SELECT assessment_sessions.id, assessment_sessions.participant_id, assessment_sessions.session_type, assessment_sessions.sequence_number, assessment_sessions.status, assessment_sessions.started_at, assessment_sessions.completed_at, assessment_sessions.duration_seconds, assessment_sessions.current_theta, assessment_sessions.current_se, assessment_sessions.items_administered, assessment_sessions.dose_state, assessment_sessions.conversation_state, assessment_sessions.turn_count 
+
+
+
+FROM assessment_sessions 
+
+
+
+WHERE assessment_sessions.status = $1::sessionstatus
+
+
+
+2025-12-25 14:57:56,705 INFO sqlalchemy.engine.Engine [generated in 0.00017s] ('COMPLETED',)
+
+
+
+2025-12-25 14:57:56,790 INFO sqlalchemy.engine.Engine SELECT satisfaction_surveys.id, satisfaction_surveys.participant_id, satisfaction_surveys.overall_rating, satisfaction_surveys.preferred_method, satisfaction_surveys.dose_ease_of_use, satisfaction_surveys.would_recommend, satisfaction_surveys.open_feedback, satisfaction_surveys.language, satisfaction_surveys.created_at 
+
+
+
+FROM satisfaction_surveys
+
+
+
+2025-12-25 14:57:56,790 INFO sqlalchemy.engine.Engine [generated in 0.00019s] ()
+
+
+
+INFO:     163.180.138.90:0 - "GET /api/export/summary HTTP/1.1" 200 OK
+
+
+
+2025-12-25 14:57:56,794 INFO sqlalchemy.engine.Engine COMMIT
+
+
+
+INFO:     163.180.138.90:0 - "OPTIONS /api/participants/register HTTP/1.1" 200 OK
+
+
+
+2025-12-25 14:58:04,451 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+
+
+
+2025-12-25 14:58:04,452 INFO sqlalchemy.engine.Engine SELECT count(participants.id) AS count_1 
+
+
+
+FROM participants
+
+
+
+2025-12-25 14:58:04,452 INFO sqlalchemy.engine.Engine [generated in 0.00017s] ()
+
+
+
+2025-12-25 14:58:04,457 INFO sqlalchemy.engine.Engine INSERT INTO participants (id, participant_code, age, gender, education_level, latin_square_row, condition_order, created_at, updated_at) VALUES ($1::VARCHAR, $2::VARCHAR, $3::INTEGER, $4::VARCHAR, $5::VARCHAR, $6::INTEGER, $7::JSON, $8::TIMESTAMP WITHOUT TIME ZONE, $9::TIMESTAMP WITHOUT TIME ZONE)
+
+
+
+2025-12-25 14:58:04,457 INFO sqlalchemy.engine.Engine [generated in 0.00035s] ('6b859a3b-4a56-4338-8ff9-aaa58dda4756', 'P006', 24, 'male', None, 0, '["survey", "dose"]', datetime.datetime(2025, 12, 25, 14, 58, 4, 457700), datetime.datetime(2025, 12, 25, 14, 58, 4, 457702))
+
+
+
+2025-12-25 14:58:04,460 INFO sqlalchemy.engine.Engine COMMIT
+
+
+
+2025-12-25 14:58:04,464 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+
+
+
+2025-12-25 14:58:04,466 INFO sqlalchemy.engine.Engine SELECT participants.id, participants.participant_code, participants.age, participants.gender, participants.education_level, participants.latin_square_row, participants.condition_order, participants.created_at, participants.updated_at 
+
+
+
+FROM participants 
+
+
+
+WHERE participants.id = $1::VARCHAR
+
+
+
+2025-12-25 14:58:04,466 INFO sqlalchemy.engine.Engine [generated in 0.00016s] ('6b859a3b-4a56-4338-8ff9-aaa58dda4756',)
+
+
+
+INFO:     163.180.138.90:0 - "POST /api/participants/register HTTP/1.1" 201 Created
+
+
+
+2025-12-25 14:58:04,472 INFO sqlalchemy.engine.Engine COMMIT
+
+
+
+INFO:     163.180.138.90:0 - "OPTIONS /api/participants/6b859a3b-4a56-4338-8ff9-aaa58dda4756/progress HTTP/1.1" 200 OK
+
+
+
+2025-12-25 14:58:05,707 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+
+
+
+2025-12-25 14:58:05,708 INFO sqlalchemy.engine.Engine SELECT participants.id, participants.participant_code, participants.age, participants.gender, participants.education_level, participants.latin_square_row, participants.condition_order, participants.created_at, participants.updated_at 
+
+
+
+FROM participants 
+
+
+
+WHERE participants.id = $1::VARCHAR
+
+
+
+2025-12-25 14:58:05,708 INFO sqlalchemy.engine.Engine [generated in 0.00014s] ('6b859a3b-4a56-4338-8ff9-aaa58dda4756',)
+
+
+
+2025-12-25 14:58:05,710 INFO sqlalchemy.engine.Engine SELECT assessment_sessions.id, assessment_sessions.participant_id, assessment_sessions.session_type, assessment_sessions.sequence_number, assessment_sessions.status, assessment_sessions.started_at, assessment_sessions.completed_at, assessment_sessions.duration_seconds, assessment_sessions.current_theta, assessment_sessions.current_se, assessment_sessions.items_administered, assessment_sessions.dose_state, assessment_sessions.conversation_state, assessment_sessions.turn_count 
+
+
+
+FROM assessment_sessions 
+
+
+
+WHERE assessment_sessions.participant_id = $1::VARCHAR AND assessment_sessions.status = $2::sessionstatus
+
+
+
+2025-12-25 14:58:05,710 INFO sqlalchemy.engine.Engine [generated in 0.00014s] ('6b859a3b-4a56-4338-8ff9-aaa58dda4756', 'COMPLETED')
+
+
+
+INFO:     163.180.138.90:0 - "GET /api/participants/6b859a3b-4a56-4338-8ff9-aaa58dda4756/progress HTTP/1.1" 200 OK
+
+
+
+2025-12-25 14:58:05,712 INFO sqlalchemy.engine.Engine COMMIT
+
+
+
+INFO:     163.180.138.90:0 - "OPTIONS /api/dose/6b859a3b-4a56-4338-8ff9-aaa58dda4756/start HTTP/1.1" 200 OK
+
+
+
+2025-12-25 14:58:07,976 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+
+
+
+2025-12-25 14:58:07,976 INFO sqlalchemy.engine.Engine SELECT participants.id, participants.participant_code, participants.age, participants.gender, participants.education_level, participants.latin_square_row, participants.condition_order, participants.created_at, participants.updated_at 
+
+
+
+FROM participants 
+
+
+
+WHERE participants.id = $1::VARCHAR
+
+
+
+2025-12-25 14:58:07,976 INFO sqlalchemy.engine.Engine [cached since 2.268s ago] ('6b859a3b-4a56-4338-8ff9-aaa58dda4756',)
+
+
+
+2025-12-25 14:58:07,980 INFO sqlalchemy.engine.Engine SELECT assessment_sessions.id, assessment_sessions.participant_id, assessment_sessions.session_type, assessment_sessions.sequence_number, assessment_sessions.status, assessment_sessions.started_at, assessment_sessions.completed_at, assessment_sessions.duration_seconds, assessment_sessions.current_theta, assessment_sessions.current_se, assessment_sessions.items_administered, assessment_sessions.dose_state, assessment_sessions.conversation_state, assessment_sessions.turn_count 
+
+
+
+FROM assessment_sessions 
+
+
+
+WHERE assessment_sessions.participant_id = $1::VARCHAR AND assessment_sessions.session_type = $2::sessiontype AND assessment_sessions.status = $3::sessionstatus
+
+
+
+2025-12-25 14:58:07,980 INFO sqlalchemy.engine.Engine [generated in 0.00017s] ('6b859a3b-4a56-4338-8ff9-aaa58dda4756', 'DOSE', 'COMPLETED')
+
+
+
+2025-12-25 14:58:07,984 INFO sqlalchemy.engine.Engine INSERT INTO assessment_sessions (id, participant_id, session_type, sequence_number, status, started_at, completed_at, duration_seconds, current_theta, current_se, items_administered, dose_state, turn_count) VALUES ($1::VARCHAR, $2::VARCHAR, $3::sessiontype, $4::INTEGER, $5::sessionstatus, $6::TIMESTAMP WITHOUT TIME ZONE, $7::TIMESTAMP WITHOUT TIME ZONE, $8::INTEGER, $9::JSON, $10::JSON, $11::INTEGER, $12::JSON, $13::INTEGER)
+
+
+
+2025-12-25 14:58:07,984 INFO sqlalchemy.engine.Engine [generated in 0.00040s] ('2629d377-2be9-4a7f-8c2f-f5f6254cae9a', '6b859a3b-4a56-4338-8ff9-aaa58dda4756', 'DOSE', 2, 'IN_PROGRESS', datetime.datetime(2025, 12, 25, 14, 58, 7, 984289), None, None, '{"extraversion": 0.0, "agreeableness": 0.0, "conscientiousness": 0.0, "neuroticism": 0.0, "openness": 0.0, "honesty_humility": 0.0}', '{"extraversion": 1.0, "agreeableness": 1.0, "conscientiousness": 1.0, "neuroticism": 1.0, "openness": 1.0, "honesty_humility": 1.0}', 0, '{"trait_states": {"extraversion": {"trait": "extraversion", "theta_estimate": 0.0, "standard_error": 1.0, "posterior_mean": 0.0, "posterior_sd": 1.0, ... (1129 characters truncated) ... s": false, "neuroticism": false, "openness": false, "honesty_humility": false}, "total_items": 0, "current_trait_index": 0, "administered_items": []}', 0)
+
+
+
+2025-12-25 14:58:07,986 INFO sqlalchemy.engine.Engine COMMIT
+
+
+
+2025-12-25 14:58:07,995 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+
+
+
+2025-12-25 14:58:07,996 INFO sqlalchemy.engine.Engine SELECT assessment_sessions.id, assessment_sessions.participant_id, assessment_sessions.session_type, assessment_sessions.sequence_number, assessment_sessions.status, assessment_sessions.started_at, assessment_sessions.completed_at, assessment_sessions.duration_seconds, assessment_sessions.current_theta, assessment_sessions.current_se, assessment_sessions.items_administered, assessment_sessions.dose_state, assessment_sessions.conversation_state, assessment_sessions.turn_count 
+
+
+
+FROM assessment_sessions 
+
+
+
+WHERE assessment_sessions.id = $1::VARCHAR
+
+
+
+2025-12-25 14:58:07,996 INFO sqlalchemy.engine.Engine [generated in 0.00014s] ('2629d377-2be9-4a7f-8c2f-f5f6254cae9a',)
+
+
+
+INFO:     163.180.138.90:0 - "POST /api/dose/6b859a3b-4a56-4338-8ff9-aaa58dda4756/start HTTP/1.1" 200 OK
+
+
+
+2025-12-25 14:58:07,999 INFO sqlalchemy.engine.Engine COMMIT
+
+
+
+INFO:     163.180.138.90:0 - "OPTIONS /api/dose/2629d377-2be9-4a7f-8c2f-f5f6254cae9a/respond HTTP/1.1" 200 OK
+
+
+
+2025-12-25 14:58:09,614 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+
+
+
+2025-12-25 14:58:09,615 INFO sqlalchemy.engine.Engine SELECT assessment_sessions.id, assessment_sessions.participant_id, assessment_sessions.session_type, assessment_sessions.sequence_number, assessment_sessions.status, assessment_sessions.started_at, assessment_sessions.completed_at, assessment_sessions.duration_seconds, assessment_sessions.current_theta, assessment_sessions.current_se, assessment_sessions.items_administered, assessment_sessions.dose_state, assessment_sessions.conversation_state, assessment_sessions.turn_count 
+
+
+
+FROM assessment_sessions 
+
+
+
+WHERE assessment_sessions.id = $1::VARCHAR
+
+
+
+2025-12-25 14:58:09,615 INFO sqlalchemy.engine.Engine [generated in 0.00016s] ('2629d377-2be9-4a7f-8c2f-f5f6254cae9a',)
+
+
+
+2025-12-25 14:58:09,804 INFO sqlalchemy.engine.Engine UPDATE assessment_sessions SET current_theta=$1::JSON, current_se=$2::JSON, items_administered=$3::INTEGER, dose_state=$4::JSON WHERE assessment_sessions.id = $5::VARCHAR
+
+
+
+2025-12-25 14:58:09,804 INFO sqlalchemy.engine.Engine [generated in 0.00038s] ('{"extraversion": 0.10712704573788684, "agreeableness": 0.0, "conscientiousness": 0.0, "neuroticism": 0.0, "openness": 0.0, "honesty_humility": 0.0}', '{"extraversion": 0.8283791678910829, "agreeableness": 1.0, "conscientiousness": 1.0, "neuroticism": 1.0, "openness": 1.0, "honesty_humility": 1.0}', 1, '{"trait_states": {"extraversion": {"trait": "extraversion", "theta_estimate": 0.10712704573788684, "standard_error": 0.8283791678910829, "posterior_m ... (1445 characters truncated) ... a_after": 0.10712704573788684, "se_before": 1.0, "se_after": 0.8283791678910829, "fisher_information": 1.0115166619673965, "presentation_order": 1}]}', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a')
+
+
+
+2025-12-25 14:58:09,808 INFO sqlalchemy.engine.Engine INSERT INTO item_responses (id, session_id, item_number, trait, response_value, response_time_ms, theta_before, theta_after, se_before, se_after, fisher_information, presentation_order, timestamp) VALUES ($1::VARCHAR, $2::VARCHAR, $3::INTEGER, $4::VARCHAR, $5::INTEGER, $6::INTEGER, $7::FLOAT, $8::FLOAT, $9::FLOAT, $10::FLOAT, $11::FLOAT, $12::INTEGER, $13::TIMESTAMP WITHOUT TIME ZONE)
+
+
+
+2025-12-25 14:58:09,808 INFO sqlalchemy.engine.Engine [generated in 0.00021s] ('99e5e05d-eb01-4dad-8c2d-bf1679b7ee32', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a', 1, 'extraversion', 4, None, 0.0, np.float64(0.10712704573788684), 1.0, np.float64(0.8283791678910829), np.float64(1.0115166619673965), 1, datetime.datetime(2025, 12, 25, 14, 58, 9, 808300))
+
+
+
+2025-12-25 14:58:09,811 INFO sqlalchemy.engine.Engine COMMIT
+
+
+
+INFO:     163.180.138.90:0 - "POST /api/dose/2629d377-2be9-4a7f-8c2f-f5f6254cae9a/respond HTTP/1.1" 200 OK
+
+
+
+2025-12-25 14:58:12,247 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+
+
+
+2025-12-25 14:58:12,247 INFO sqlalchemy.engine.Engine SELECT assessment_sessions.id, assessment_sessions.participant_id, assessment_sessions.session_type, assessment_sessions.sequence_number, assessment_sessions.status, assessment_sessions.started_at, assessment_sessions.completed_at, assessment_sessions.duration_seconds, assessment_sessions.current_theta, assessment_sessions.current_se, assessment_sessions.items_administered, assessment_sessions.dose_state, assessment_sessions.conversation_state, assessment_sessions.turn_count 
+
+
+
+FROM assessment_sessions 
+
+
+
+WHERE assessment_sessions.id = $1::VARCHAR
+
+
+
+2025-12-25 14:58:12,247 INFO sqlalchemy.engine.Engine [cached since 2.632s ago] ('2629d377-2be9-4a7f-8c2f-f5f6254cae9a',)
+
+
+
+2025-12-25 14:58:12,407 INFO sqlalchemy.engine.Engine UPDATE assessment_sessions SET current_theta=$1::JSON, current_se=$2::JSON, items_administered=$3::INTEGER, dose_state=$4::JSON WHERE assessment_sessions.id = $5::VARCHAR
+
+
+
+2025-12-25 14:58:12,407 INFO sqlalchemy.engine.Engine [cached since 2.603s ago] ('{"extraversion": 0.10712704573788684, "agreeableness": -0.32395466004359014, "conscientiousness": 0.0, "neuroticism": 0.0, "openness": 0.0, "honesty_humility": 0.0}', '{"extraversion": 0.8283791678910829, "agreeableness": 0.7533020774537311, "conscientiousness": 1.0, "neuroticism": 1.0, "openness": 1.0, "honesty_humility": 1.0}', 2, '{"trait_states": {"extraversion": {"trait": "extraversion", "theta_estimate": 0.10712704573788684, "standard_error": 0.8283791678910829, "posterior_m ... (1767 characters truncated) ... _after": -0.32395466004359014, "se_before": 1.0, "se_after": 0.7533020774537311, "fisher_information": 1.3073142654308654, "presentation_order": 2}]}', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a')
+
+
+
+2025-12-25 14:58:12,408 INFO sqlalchemy.engine.Engine INSERT INTO item_responses (id, session_id, item_number, trait, response_value, response_time_ms, theta_before, theta_after, se_before, se_after, fisher_information, presentation_order, timestamp) VALUES ($1::VARCHAR, $2::VARCHAR, $3::INTEGER, $4::VARCHAR, $5::INTEGER, $6::INTEGER, $7::FLOAT, $8::FLOAT, $9::FLOAT, $10::FLOAT, $11::FLOAT, $12::INTEGER, $13::TIMESTAMP WITHOUT TIME ZONE)
+
+
+
+2025-12-25 14:58:12,408 INFO sqlalchemy.engine.Engine [cached since 2.6s ago] ('c79c69f2-5501-4742-bf62-49e9ab49ca51', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a', 2, 'agreeableness', 5, None, 0.0, np.float64(-0.32395466004359014), 1.0, np.float64(0.7533020774537311), np.float64(1.3073142654308654), 2, datetime.datetime(2025, 12, 25, 14, 58, 12, 408541))
+
+
+
+2025-12-25 14:58:12,409 INFO sqlalchemy.engine.Engine COMMIT
+
+
+
+INFO:     163.180.138.90:0 - "POST /api/dose/2629d377-2be9-4a7f-8c2f-f5f6254cae9a/respond HTTP/1.1" 200 OK
+
+
+
+2025-12-25 14:58:13,150 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+
+
+
+2025-12-25 14:58:13,151 INFO sqlalchemy.engine.Engine SELECT assessment_sessions.id, assessment_sessions.participant_id, assessment_sessions.session_type, assessment_sessions.sequence_number, assessment_sessions.status, assessment_sessions.started_at, assessment_sessions.completed_at, assessment_sessions.duration_seconds, assessment_sessions.current_theta, assessment_sessions.current_se, assessment_sessions.items_administered, assessment_sessions.dose_state, assessment_sessions.conversation_state, assessment_sessions.turn_count 
+
+
+
+FROM assessment_sessions 
+
+
+
+WHERE assessment_sessions.id = $1::VARCHAR
+
+
+
+2025-12-25 14:58:13,151 INFO sqlalchemy.engine.Engine [cached since 3.536s ago] ('2629d377-2be9-4a7f-8c2f-f5f6254cae9a',)
+
+
+
+2025-12-25 14:58:13,303 INFO sqlalchemy.engine.Engine UPDATE assessment_sessions SET current_theta=$1::JSON, current_se=$2::JSON, items_administered=$3::INTEGER, dose_state=$4::JSON WHERE assessment_sessions.id = $5::VARCHAR
+
+
+
+2025-12-25 14:58:13,303 INFO sqlalchemy.engine.Engine [cached since 3.499s ago] ('{"extraversion": 0.10712704573788684, "agreeableness": -0.32395466004359014, "conscientiousness": -0.38388010928578575, "neuroticism": 0.0, "openness": 0.0, "honesty_humility": 0.0}', '{"extraversion": 0.8283791678910829, "agreeableness": 0.7533020774537311, "conscientiousness": 0.8703113809968681, "neuroticism": 1.0, "openness": 1.0, "honesty_humility": 1.0}', 3, '{"trait_states": {"extraversion": {"trait": "extraversion", "theta_estimate": 0.10712704573788684, "standard_error": 0.8283791678910829, "posterior_m ... (2096 characters truncated) ... _after": -0.38388010928578575, "se_before": 1.0, "se_after": 0.8703113809968681, "fisher_information": 0.9431274675967887, "presentation_order": 3}]}', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a')
+
+
+
+2025-12-25 14:58:13,304 INFO sqlalchemy.engine.Engine INSERT INTO item_responses (id, session_id, item_number, trait, response_value, response_time_ms, theta_before, theta_after, se_before, se_after, fisher_information, presentation_order, timestamp) VALUES ($1::VARCHAR, $2::VARCHAR, $3::INTEGER, $4::VARCHAR, $5::INTEGER, $6::INTEGER, $7::FLOAT, $8::FLOAT, $9::FLOAT, $10::FLOAT, $11::FLOAT, $12::INTEGER, $13::TIMESTAMP WITHOUT TIME ZONE)
+
+
+
+2025-12-25 14:58:13,304 INFO sqlalchemy.engine.Engine [cached since 3.497s ago] ('71795b05-4deb-4846-b827-c9545c3213a7', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a', 22, 'conscientiousness', 5, None, 0.0, np.float64(-0.38388010928578575), 1.0, np.float64(0.8703113809968681), np.float64(0.9431274675967887), 3, datetime.datetime(2025, 12, 25, 14, 58, 13, 304880))
+
+
+
+2025-12-25 14:58:13,305 INFO sqlalchemy.engine.Engine COMMIT
+
+
+
+INFO:     163.180.138.90:0 - "POST /api/dose/2629d377-2be9-4a7f-8c2f-f5f6254cae9a/respond HTTP/1.1" 200 OK
+
+
+
+2025-12-25 14:58:13,828 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+
+
+
+2025-12-25 14:58:13,828 INFO sqlalchemy.engine.Engine SELECT assessment_sessions.id, assessment_sessions.participant_id, assessment_sessions.session_type, assessment_sessions.sequence_number, assessment_sessions.status, assessment_sessions.started_at, assessment_sessions.completed_at, assessment_sessions.duration_seconds, assessment_sessions.current_theta, assessment_sessions.current_se, assessment_sessions.items_administered, assessment_sessions.dose_state, assessment_sessions.conversation_state, assessment_sessions.turn_count 
+
+
+
+FROM assessment_sessions 
+
+
+
+WHERE assessment_sessions.id = $1::VARCHAR
+
+
+
+2025-12-25 14:58:13,828 INFO sqlalchemy.engine.Engine [cached since 4.213s ago] ('2629d377-2be9-4a7f-8c2f-f5f6254cae9a',)
+
+
+
+2025-12-25 14:58:13,996 INFO sqlalchemy.engine.Engine UPDATE assessment_sessions SET current_theta=$1::JSON, current_se=$2::JSON, items_administered=$3::INTEGER, dose_state=$4::JSON WHERE assessment_sessions.id = $5::VARCHAR
+
+
+
+2025-12-25 14:58:13,996 INFO sqlalchemy.engine.Engine [cached since 4.192s ago] ('{"extraversion": 0.10712704573788684, "agreeableness": -0.32395466004359014, "conscientiousness": -0.38388010928578575, "neuroticism": 0.4582473755540297, "openness": 0.0, "honesty_humility": 0.0}', '{"extraversion": 0.8283791678910829, "agreeableness": 0.7533020774537311, "conscientiousness": 0.8703113809968681, "neuroticism": 0.8327032187533365, "openness": 1.0, "honesty_humility": 1.0}', 4, '{"trait_states": {"extraversion": {"trait": "extraversion", "theta_estimate": 0.10712704573788684, "standard_error": 0.8283791678910829, "posterior_m ... (2410 characters truncated) ... ta_after": 0.4582473755540297, "se_before": 1.0, "se_after": 0.8327032187533365, "fisher_information": 1.2472902972469448, "presentation_order": 4}]}', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a')
+
+
+
+2025-12-25 14:58:13,999 INFO sqlalchemy.engine.Engine INSERT INTO item_responses (id, session_id, item_number, trait, response_value, response_time_ms, theta_before, theta_after, se_before, se_after, fisher_information, presentation_order, timestamp) VALUES ($1::VARCHAR, $2::VARCHAR, $3::INTEGER, $4::VARCHAR, $5::INTEGER, $6::INTEGER, $7::FLOAT, $8::FLOAT, $9::FLOAT, $10::FLOAT, $11::FLOAT, $12::INTEGER, $13::TIMESTAMP WITHOUT TIME ZONE)
+
+
+
+2025-12-25 14:58:13,999 INFO sqlalchemy.engine.Engine [cached since 4.191s ago] ('ffc20ee9-afe8-41fe-bfff-0b555fb03016', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a', 4, 'neuroticism', 5, None, 0.0, np.float64(0.4582473755540297), 1.0, np.float64(0.8327032187533365), np.float64(1.2472902972469448), 4, datetime.datetime(2025, 12, 25, 14, 58, 13, 999084))
+
+
+
+2025-12-25 14:58:14,000 INFO sqlalchemy.engine.Engine COMMIT
+
+
+
+INFO:     163.180.138.90:0 - "POST /api/dose/2629d377-2be9-4a7f-8c2f-f5f6254cae9a/respond HTTP/1.1" 200 OK
+
+
+
+2025-12-25 14:58:14,484 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+
+
+
+2025-12-25 14:58:14,484 INFO sqlalchemy.engine.Engine SELECT assessment_sessions.id, assessment_sessions.participant_id, assessment_sessions.session_type, assessment_sessions.sequence_number, assessment_sessions.status, assessment_sessions.started_at, assessment_sessions.completed_at, assessment_sessions.duration_seconds, assessment_sessions.current_theta, assessment_sessions.current_se, assessment_sessions.items_administered, assessment_sessions.dose_state, assessment_sessions.conversation_state, assessment_sessions.turn_count 
+
+
+
+FROM assessment_sessions 
+
+
+
+WHERE assessment_sessions.id = $1::VARCHAR
+
+
+
+2025-12-25 14:58:14,484 INFO sqlalchemy.engine.Engine [cached since 4.869s ago] ('2629d377-2be9-4a7f-8c2f-f5f6254cae9a',)
+
+
+
+2025-12-25 14:58:14,603 INFO sqlalchemy.engine.Engine UPDATE assessment_sessions SET current_theta=$1::JSON, current_se=$2::JSON, items_administered=$3::INTEGER, dose_state=$4::JSON WHERE assessment_sessions.id = $5::VARCHAR
+
+
+
+2025-12-25 14:58:14,603 INFO sqlalchemy.engine.Engine [cached since 4.799s ago] ('{"extraversion": 0.10712704573788684, "agreeableness": -0.32395466004359014, "conscientiousness": -0.38388010928578575, "neuroticism": 0.4582473755540297, "openness": -0.5227840865648963, "honesty_humility": 0.0}', '{"extraversion": 0.8283791678910829, "agreeableness": 0.7533020774537311, "conscientiousness": 0.8703113809968681, "neuroticism": 0.8327032187533365, "openness": 0.8125538621130517, "honesty_humility": 1.0}', 5, '{"trait_states": {"extraversion": {"trait": "extraversion", "theta_estimate": 0.10712704573788684, "standard_error": 0.8283791678910829, "posterior_m ... (2726 characters truncated) ... ta_after": -0.5227840865648963, "se_before": 1.0, "se_after": 0.8125538621130517, "fisher_information": 1.374903961292424, "presentation_order": 5}]}', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a')
+
+
+
+2025-12-25 14:58:14,605 INFO sqlalchemy.engine.Engine INSERT INTO item_responses (id, session_id, item_number, trait, response_value, response_time_ms, theta_before, theta_after, se_before, se_after, fisher_information, presentation_order, timestamp) VALUES ($1::VARCHAR, $2::VARCHAR, $3::INTEGER, $4::VARCHAR, $5::INTEGER, $6::INTEGER, $7::FLOAT, $8::FLOAT, $9::FLOAT, $10::FLOAT, $11::FLOAT, $12::INTEGER, $13::TIMESTAMP WITHOUT TIME ZONE)
+
+
+
+2025-12-25 14:58:14,605 INFO sqlalchemy.engine.Engine [cached since 4.797s ago] ('deddb346-3443-47c6-9009-2c6a4827a5e6', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a', 21, 'openness', 5, None, 0.0, np.float64(-0.5227840865648963), 1.0, np.float64(0.8125538621130517), np.float64(1.374903961292424), 5, datetime.datetime(2025, 12, 25, 14, 58, 14, 605558))
+
+
+
+2025-12-25 14:58:14,607 INFO sqlalchemy.engine.Engine COMMIT
+
+
+
+INFO:     163.180.138.90:0 - "POST /api/dose/2629d377-2be9-4a7f-8c2f-f5f6254cae9a/respond HTTP/1.1" 200 OK
+
+
+
+2025-12-25 14:58:15,107 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+
+
+
+2025-12-25 14:58:15,107 INFO sqlalchemy.engine.Engine SELECT assessment_sessions.id, assessment_sessions.participant_id, assessment_sessions.session_type, assessment_sessions.sequence_number, assessment_sessions.status, assessment_sessions.started_at, assessment_sessions.completed_at, assessment_sessions.duration_seconds, assessment_sessions.current_theta, assessment_sessions.current_se, assessment_sessions.items_administered, assessment_sessions.dose_state, assessment_sessions.conversation_state, assessment_sessions.turn_count 
+
+
+
+FROM assessment_sessions 
+
+
+
+WHERE assessment_sessions.id = $1::VARCHAR
+
+
+
+2025-12-25 14:58:15,107 INFO sqlalchemy.engine.Engine [cached since 5.492s ago] ('2629d377-2be9-4a7f-8c2f-f5f6254cae9a',)
+
+
+
+2025-12-25 14:58:15,301 INFO sqlalchemy.engine.Engine UPDATE assessment_sessions SET current_theta=$1::JSON, current_se=$2::JSON, items_administered=$3::INTEGER, dose_state=$4::JSON WHERE assessment_sessions.id = $5::VARCHAR
+
+
+
+2025-12-25 14:58:15,301 INFO sqlalchemy.engine.Engine [cached since 5.497s ago] ('{"extraversion": 0.10712704573788684, "agreeableness": -0.32395466004359014, "conscientiousness": -0.38388010928578575, "neuroticism": 0.4582473755540297, "openness": -0.5227840865648963, "honesty_humility": -0.5352902218674543}', '{"extraversion": 0.8283791678910829, "agreeableness": 0.7533020774537311, "conscientiousness": 0.8703113809968681, "neuroticism": 0.8327032187533365, "openness": 0.8125538621130517, "honesty_humility": 0.7590841950524343}', 6, '{"trait_states": {"extraversion": {"trait": "extraversion", "theta_estimate": 0.10712704573788684, "standard_error": 0.8283791678910829, "posterior_m ... (3050 characters truncated) ... ta_after": -0.5352902218674543, "se_before": 1.0, "se_after": 0.7590841950524343, "fisher_information": 2.143540802680517, "presentation_order": 6}]}', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a')
+
+
+
+2025-12-25 14:58:15,303 INFO sqlalchemy.engine.Engine INSERT INTO item_responses (id, session_id, item_number, trait, response_value, response_time_ms, theta_before, theta_after, se_before, se_after, fisher_information, presentation_order, timestamp) VALUES ($1::VARCHAR, $2::VARCHAR, $3::INTEGER, $4::VARCHAR, $5::INTEGER, $6::INTEGER, $7::FLOAT, $8::FLOAT, $9::FLOAT, $10::FLOAT, $11::FLOAT, $12::INTEGER, $13::TIMESTAMP WITHOUT TIME ZONE)
+
+
+
+2025-12-25 14:58:15,303 INFO sqlalchemy.engine.Engine [cached since 5.495s ago] ('08f5e334-e76f-448d-87b4-a5119ecf1c48', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a', 18, 'honesty_humility', 5, None, 0.0, np.float64(-0.5352902218674543), 1.0, np.float64(0.7590841950524343), np.float64(2.143540802680517), 6, datetime.datetime(2025, 12, 25, 14, 58, 15, 303176))
+
+
+
+2025-12-25 14:58:15,304 INFO sqlalchemy.engine.Engine COMMIT
+
+
+
+INFO:     163.180.138.90:0 - "POST /api/dose/2629d377-2be9-4a7f-8c2f-f5f6254cae9a/respond HTTP/1.1" 200 OK
+
+
+
+2025-12-25 14:58:15,781 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+
+
+
+2025-12-25 14:58:15,782 INFO sqlalchemy.engine.Engine SELECT assessment_sessions.id, assessment_sessions.participant_id, assessment_sessions.session_type, assessment_sessions.sequence_number, assessment_sessions.status, assessment_sessions.started_at, assessment_sessions.completed_at, assessment_sessions.duration_seconds, assessment_sessions.current_theta, assessment_sessions.current_se, assessment_sessions.items_administered, assessment_sessions.dose_state, assessment_sessions.conversation_state, assessment_sessions.turn_count 
+
+
+
+FROM assessment_sessions 
+
+
+
+WHERE assessment_sessions.id = $1::VARCHAR
+
+
+
+2025-12-25 14:58:15,782 INFO sqlalchemy.engine.Engine [cached since 6.167s ago] ('2629d377-2be9-4a7f-8c2f-f5f6254cae9a',)
+
+
+
+2025-12-25 14:58:16,006 INFO sqlalchemy.engine.Engine UPDATE assessment_sessions SET current_theta=$1::JSON, current_se=$2::JSON, items_administered=$3::INTEGER, dose_state=$4::JSON WHERE assessment_sessions.id = $5::VARCHAR
+
+
+
+2025-12-25 14:58:16,006 INFO sqlalchemy.engine.Engine [cached since 6.202s ago] ('{"extraversion": -0.11588144055020225, "agreeableness": -0.32395466004359014, "conscientiousness": -0.38388010928578575, "neuroticism": 0.4582473755540297, "openness": -0.5227840865648963, "honesty_humility": -0.5352902218674543}', '{"extraversion": 0.7361936791020116, "agreeableness": 0.7533020774537311, "conscientiousness": 0.8703113809968681, "neuroticism": 0.8327032187533365, "openness": 0.8125538621130517, "honesty_humility": 0.7590841950524343}', 7, '{"trait_states": {"extraversion": {"trait": "extraversion", "theta_estimate": -0.11588144055020225, "standard_error": 0.7361936791020116, "posterior_ ... (3331 characters truncated) ... 88144055020225, "se_before": 0.8283791678910829, "se_after": 0.7361936791020116, "fisher_information": 0.9571046344143656, "presentation_order": 7}]}', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a')
+
+
+
+2025-12-25 14:58:16,007 INFO sqlalchemy.engine.Engine INSERT INTO item_responses (id, session_id, item_number, trait, response_value, response_time_ms, theta_before, theta_after, se_before, se_after, fisher_information, presentation_order, timestamp) VALUES ($1::VARCHAR, $2::VARCHAR, $3::INTEGER, $4::VARCHAR, $5::INTEGER, $6::INTEGER, $7::FLOAT, $8::FLOAT, $9::FLOAT, $10::FLOAT, $11::FLOAT, $12::INTEGER, $13::TIMESTAMP WITHOUT TIME ZONE)
+
+
+
+2025-12-25 14:58:16,007 INFO sqlalchemy.engine.Engine [cached since 6.199s ago] ('beb6877f-2515-43c8-b37c-0eef0b7a7566', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a', 19, 'extraversion', 5, None, 0.10712704573788684, np.float64(-0.11588144055020225), 0.8283791678910829, np.float64(0.7361936791020116), np.float64(0.9571046344143656), 7, datetime.datetime(2025, 12, 25, 14, 58, 16, 7548))
+
+
+
+2025-12-25 14:58:16,008 INFO sqlalchemy.engine.Engine COMMIT
+
+
+
+INFO:     163.180.138.90:0 - "POST /api/dose/2629d377-2be9-4a7f-8c2f-f5f6254cae9a/respond HTTP/1.1" 200 OK
+
+
+
+2025-12-25 14:58:16,415 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+
+
+
+2025-12-25 14:58:16,416 INFO sqlalchemy.engine.Engine SELECT assessment_sessions.id, assessment_sessions.participant_id, assessment_sessions.session_type, assessment_sessions.sequence_number, assessment_sessions.status, assessment_sessions.started_at, assessment_sessions.completed_at, assessment_sessions.duration_seconds, assessment_sessions.current_theta, assessment_sessions.current_se, assessment_sessions.items_administered, assessment_sessions.dose_state, assessment_sessions.conversation_state, assessment_sessions.turn_count 
+
+
+
+FROM assessment_sessions 
+
+
+
+WHERE assessment_sessions.id = $1::VARCHAR
+
+
+
+2025-12-25 14:58:16,416 INFO sqlalchemy.engine.Engine [cached since 6.801s ago] ('2629d377-2be9-4a7f-8c2f-f5f6254cae9a',)
+
+
+
+2025-12-25 14:58:16,699 INFO sqlalchemy.engine.Engine UPDATE assessment_sessions SET current_theta=$1::JSON, current_se=$2::JSON, items_administered=$3::INTEGER, dose_state=$4::JSON WHERE assessment_sessions.id = $5::VARCHAR
+
+
+
+2025-12-25 14:58:16,699 INFO sqlalchemy.engine.Engine [cached since 6.895s ago] ('{"extraversion": -0.11588144055020225, "agreeableness": -0.35662934799738877, "conscientiousness": -0.38388010928578575, "neuroticism": 0.4582473755540297, "openness": -0.5227840865648963, "honesty_humility": -0.5352902218674543}', '{"extraversion": 0.7361936791020116, "agreeableness": 0.6560496468206666, "conscientiousness": 0.8703113809968681, "neuroticism": 0.8327032187533365, "openness": 0.8125538621130517, "honesty_humility": 0.7590841950524343}', 8, '{"trait_states": {"extraversion": {"trait": "extraversion", "theta_estimate": -0.11588144055020225, "standard_error": 0.7361936791020116, "posterior_ ... (3612 characters truncated) ... 62934799738877, "se_before": 0.7533020774537311, "se_after": 0.6560496468206666, "fisher_information": 1.0614846530781572, "presentation_order": 8}]}', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a')
+
+
+
+2025-12-25 14:58:16,700 INFO sqlalchemy.engine.Engine INSERT INTO item_responses (id, session_id, item_number, trait, response_value, response_time_ms, theta_before, theta_after, se_before, se_after, fisher_information, presentation_order, timestamp) VALUES ($1::VARCHAR, $2::VARCHAR, $3::INTEGER, $4::VARCHAR, $5::INTEGER, $6::INTEGER, $7::FLOAT, $8::FLOAT, $9::FLOAT, $10::FLOAT, $11::FLOAT, $12::INTEGER, $13::TIMESTAMP WITHOUT TIME ZONE)
+
+
+
+2025-12-25 14:58:16,700 INFO sqlalchemy.engine.Engine [cached since 6.892s ago] ('dac6cb4f-eb97-4d40-ad5c-196f25c14216', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a', 14, 'agreeableness', 5, None, -0.32395466004359014, np.float64(-0.35662934799738877), 0.7533020774537311, np.float64(0.6560496468206666), np.float64(1.0614846530781572), 8, datetime.datetime(2025, 12, 25, 14, 58, 16, 700520))
+
+
+
+2025-12-25 14:58:16,701 INFO sqlalchemy.engine.Engine COMMIT
+
+
+
+INFO:     163.180.138.90:0 - "POST /api/dose/2629d377-2be9-4a7f-8c2f-f5f6254cae9a/respond HTTP/1.1" 200 OK
+
+
+
+2025-12-25 14:58:17,046 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+
+
+
+2025-12-25 14:58:17,046 INFO sqlalchemy.engine.Engine SELECT assessment_sessions.id, assessment_sessions.participant_id, assessment_sessions.session_type, assessment_sessions.sequence_number, assessment_sessions.status, assessment_sessions.started_at, assessment_sessions.completed_at, assessment_sessions.duration_seconds, assessment_sessions.current_theta, assessment_sessions.current_se, assessment_sessions.items_administered, assessment_sessions.dose_state, assessment_sessions.conversation_state, assessment_sessions.turn_count 
+
+
+
+FROM assessment_sessions 
+
+
+
+WHERE assessment_sessions.id = $1::VARCHAR
+
+
+
+2025-12-25 14:58:17,046 INFO sqlalchemy.engine.Engine [cached since 7.431s ago] ('2629d377-2be9-4a7f-8c2f-f5f6254cae9a',)
+
+
+
+2025-12-25 14:58:17,303 INFO sqlalchemy.engine.Engine UPDATE assessment_sessions SET current_theta=$1::JSON, current_se=$2::JSON, items_administered=$3::INTEGER, dose_state=$4::JSON WHERE assessment_sessions.id = $5::VARCHAR
+
+
+
+2025-12-25 14:58:17,303 INFO sqlalchemy.engine.Engine [cached since 7.499s ago] ('{"extraversion": -0.11588144055020225, "agreeableness": -0.35662934799738877, "conscientiousness": -0.2763169266378649, "neuroticism": 0.4582473755540297, "openness": -0.5227840865648963, "honesty_humility": -0.5352902218674543}', '{"extraversion": 0.7361936791020116, "agreeableness": 0.6560496468206666, "conscientiousness": 0.7761535291978755, "neuroticism": 0.8327032187533365, "openness": 0.8125538621130517, "honesty_humility": 0.7590841950524343}', 9, '{"trait_states": {"extraversion": {"trait": "extraversion", "theta_estimate": -0.11588144055020225, "standard_error": 0.7361936791020116, "posterior_ ... (3892 characters truncated) ... 63169266378649, "se_before": 0.8703113809968681, "se_after": 0.7761535291978755, "fisher_information": 0.8099003430497383, "presentation_order": 9}]}', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a')
+
+
+
+2025-12-25 14:58:17,305 INFO sqlalchemy.engine.Engine INSERT INTO item_responses (id, session_id, item_number, trait, response_value, response_time_ms, theta_before, theta_after, se_before, se_after, fisher_information, presentation_order, timestamp) VALUES ($1::VARCHAR, $2::VARCHAR, $3::INTEGER, $4::VARCHAR, $5::INTEGER, $6::INTEGER, $7::FLOAT, $8::FLOAT, $9::FLOAT, $10::FLOAT, $11::FLOAT, $12::INTEGER, $13::TIMESTAMP WITHOUT TIME ZONE)
+
+
+
+2025-12-25 14:58:17,305 INFO sqlalchemy.engine.Engine [cached since 7.497s ago] ('229d18a3-4ac7-44fe-ba6e-556db351fa94', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a', 3, 'conscientiousness', 5, None, -0.38388010928578575, np.float64(-0.2763169266378649), 0.8703113809968681, np.float64(0.7761535291978755), np.float64(0.8099003430497383), 9, datetime.datetime(2025, 12, 25, 14, 58, 17, 305136))
+
+
+
+2025-12-25 14:58:17,306 INFO sqlalchemy.engine.Engine COMMIT
+
+
+
+INFO:     163.180.138.90:0 - "POST /api/dose/2629d377-2be9-4a7f-8c2f-f5f6254cae9a/respond HTTP/1.1" 200 OK
+
+
+
+2025-12-25 14:58:17,687 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+
+
+
+2025-12-25 14:58:17,687 INFO sqlalchemy.engine.Engine SELECT assessment_sessions.id, assessment_sessions.participant_id, assessment_sessions.session_type, assessment_sessions.sequence_number, assessment_sessions.status, assessment_sessions.started_at, assessment_sessions.completed_at, assessment_sessions.duration_seconds, assessment_sessions.current_theta, assessment_sessions.current_se, assessment_sessions.items_administered, assessment_sessions.dose_state, assessment_sessions.conversation_state, assessment_sessions.turn_count 
+
+
+
+FROM assessment_sessions 
+
+
+
+WHERE assessment_sessions.id = $1::VARCHAR
+
+
+
+2025-12-25 14:58:17,687 INFO sqlalchemy.engine.Engine [cached since 8.072s ago] ('2629d377-2be9-4a7f-8c2f-f5f6254cae9a',)
+
+
+
+2025-12-25 14:58:17,904 INFO sqlalchemy.engine.Engine UPDATE assessment_sessions SET current_theta=$1::JSON, current_se=$2::JSON, items_administered=$3::INTEGER, dose_state=$4::JSON WHERE assessment_sessions.id = $5::VARCHAR
+
+
+
+2025-12-25 14:58:17,904 INFO sqlalchemy.engine.Engine [cached since 8.1s ago] ('{"extraversion": -0.11588144055020225, "agreeableness": -0.35662934799738877, "conscientiousness": -0.2763169266378649, "neuroticism": 0.6272361029300104, "openness": -0.5227840865648963, "honesty_humility": -0.5352902218674543}', '{"extraversion": 0.7361936791020116, "agreeableness": 0.6560496468206666, "conscientiousness": 0.7761535291978755, "neuroticism": 0.7434939381720432, "openness": 0.8125538621130517, "honesty_humility": 0.7590841950524343}', 10, '{"trait_states": {"extraversion": {"trait": "extraversion", "theta_estimate": -0.11588144055020225, "standard_error": 0.7361936791020116, "posterior_ ... (4170 characters truncated) ... 2361029300104, "se_before": 0.8327032187533365, "se_after": 0.7434939381720432, "fisher_information": 0.8347404332652563, "presentation_order": 10}]}', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a')
+
+
+
+2025-12-25 14:58:17,906 INFO sqlalchemy.engine.Engine INSERT INTO item_responses (id, session_id, item_number, trait, response_value, response_time_ms, theta_before, theta_after, se_before, se_after, fisher_information, presentation_order, timestamp) VALUES ($1::VARCHAR, $2::VARCHAR, $3::INTEGER, $4::VARCHAR, $5::INTEGER, $6::INTEGER, $7::FLOAT, $8::FLOAT, $9::FLOAT, $10::FLOAT, $11::FLOAT, $12::INTEGER, $13::TIMESTAMP WITHOUT TIME ZONE)
+
+
+
+2025-12-25 14:58:17,906 INFO sqlalchemy.engine.Engine [cached since 8.098s ago] ('050a8035-3f6a-400a-92e6-4a0ab5ab8f07', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a', 16, 'neuroticism', 5, None, 0.4582473755540297, np.float64(0.6272361029300104), 0.8327032187533365, np.float64(0.7434939381720432), np.float64(0.8347404332652563), 10, datetime.datetime(2025, 12, 25, 14, 58, 17, 906072))
+
+
+
+2025-12-25 14:58:17,907 INFO sqlalchemy.engine.Engine COMMIT
+
+
+
+INFO:     163.180.138.90:0 - "POST /api/dose/2629d377-2be9-4a7f-8c2f-f5f6254cae9a/respond HTTP/1.1" 200 OK
+
+
+
+2025-12-25 14:58:18,298 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+
+
+
+2025-12-25 14:58:18,298 INFO sqlalchemy.engine.Engine SELECT assessment_sessions.id, assessment_sessions.participant_id, assessment_sessions.session_type, assessment_sessions.sequence_number, assessment_sessions.status, assessment_sessions.started_at, assessment_sessions.completed_at, assessment_sessions.duration_seconds, assessment_sessions.current_theta, assessment_sessions.current_se, assessment_sessions.items_administered, assessment_sessions.dose_state, assessment_sessions.conversation_state, assessment_sessions.turn_count 
+
+
+
+FROM assessment_sessions 
+
+
+
+WHERE assessment_sessions.id = $1::VARCHAR
+
+
+
+2025-12-25 14:58:18,298 INFO sqlalchemy.engine.Engine [cached since 8.683s ago] ('2629d377-2be9-4a7f-8c2f-f5f6254cae9a',)
+
+
+
+2025-12-25 14:58:18,607 INFO sqlalchemy.engine.Engine UPDATE assessment_sessions SET current_theta=$1::JSON, current_se=$2::JSON, items_administered=$3::INTEGER, dose_state=$4::JSON WHERE assessment_sessions.id = $5::VARCHAR
+
+
+
+2025-12-25 14:58:18,607 INFO sqlalchemy.engine.Engine [cached since 8.803s ago] ('{"extraversion": -0.11588144055020225, "agreeableness": -0.35662934799738877, "conscientiousness": -0.2763169266378649, "neuroticism": 0.6272361029300104, "openness": -0.7367600643471012, "honesty_humility": -0.5352902218674543}', '{"extraversion": 0.7361936791020116, "agreeableness": 0.6560496468206666, "conscientiousness": 0.7761535291978755, "neuroticism": 0.7434939381720432, "openness": 0.6988647393270395, "honesty_humility": 0.7590841950524343}', 11, '{"trait_states": {"extraversion": {"trait": "extraversion", "theta_estimate": -0.11588144055020225, "standard_error": 0.7361936791020116, "posterior_ ... (4443 characters truncated) ... 7600643471012, "se_before": 0.8125538621130517, "se_after": 0.6988647393270395, "fisher_information": 1.1924085314680788, "presentation_order": 11}]}', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a')
+
+
+
+2025-12-25 14:58:18,609 INFO sqlalchemy.engine.Engine INSERT INTO item_responses (id, session_id, item_number, trait, response_value, response_time_ms, theta_before, theta_after, se_before, se_after, fisher_information, presentation_order, timestamp) VALUES ($1::VARCHAR, $2::VARCHAR, $3::INTEGER, $4::VARCHAR, $5::INTEGER, $6::INTEGER, $7::FLOAT, $8::FLOAT, $9::FLOAT, $10::FLOAT, $11::FLOAT, $12::INTEGER, $13::TIMESTAMP WITHOUT TIME ZONE)
+
+
+
+2025-12-25 14:58:18,609 INFO sqlalchemy.engine.Engine [cached since 8.801s ago] ('70c2cfa9-5cf9-4078-93c2-628efb695dc9', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a', 9, 'openness', 5, None, -0.5227840865648963, np.float64(-0.7367600643471012), 0.8125538621130517, np.float64(0.6988647393270395), np.float64(1.1924085314680788), 11, datetime.datetime(2025, 12, 25, 14, 58, 18, 609269))
+
+
+
+2025-12-25 14:58:18,610 INFO sqlalchemy.engine.Engine COMMIT
+
+
+
+INFO:     163.180.138.90:0 - "POST /api/dose/2629d377-2be9-4a7f-8c2f-f5f6254cae9a/respond HTTP/1.1" 200 OK
+
+
+
+2025-12-25 14:58:19,564 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+
+
+
+2025-12-25 14:58:19,565 INFO sqlalchemy.engine.Engine SELECT assessment_sessions.id, assessment_sessions.participant_id, assessment_sessions.session_type, assessment_sessions.sequence_number, assessment_sessions.status, assessment_sessions.started_at, assessment_sessions.completed_at, assessment_sessions.duration_seconds, assessment_sessions.current_theta, assessment_sessions.current_se, assessment_sessions.items_administered, assessment_sessions.dose_state, assessment_sessions.conversation_state, assessment_sessions.turn_count 
+
+
+
+FROM assessment_sessions 
+
+
+
+WHERE assessment_sessions.id = $1::VARCHAR
+
+
+
+2025-12-25 14:58:19,565 INFO sqlalchemy.engine.Engine [cached since 9.95s ago] ('2629d377-2be9-4a7f-8c2f-f5f6254cae9a',)
+
+
+
+2025-12-25 14:58:19,794 INFO sqlalchemy.engine.Engine UPDATE assessment_sessions SET current_theta=$1::JSON, current_se=$2::JSON, items_administered=$3::INTEGER, dose_state=$4::JSON WHERE assessment_sessions.id = $5::VARCHAR
+
+
+
+2025-12-25 14:58:19,795 INFO sqlalchemy.engine.Engine [cached since 9.99s ago] ('{"extraversion": -0.11588144055020225, "agreeableness": -0.35662934799738877, "conscientiousness": -0.2763169266378649, "neuroticism": 0.6272361029300104, "openness": -0.7367600643471012, "honesty_humility": -0.6595095865740281}', '{"extraversion": 0.7361936791020116, "agreeableness": 0.6560496468206666, "conscientiousness": 0.7761535291978755, "neuroticism": 0.7434939381720432, "openness": 0.6988647393270395, "honesty_humility": 0.6504333418456199}', 12, '{"trait_states": {"extraversion": {"trait": "extraversion", "theta_estimate": -0.11588144055020225, "standard_error": 0.7361936791020116, "posterior_ ... (4726 characters truncated) ... 95095865740281, "se_before": 0.7590841950524343, "se_after": 0.6504333418456199, "fisher_information": 1.512935219872464, "presentation_order": 12}]}', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a')
+
+
+
+2025-12-25 14:58:19,800 INFO sqlalchemy.engine.Engine INSERT INTO item_responses (id, session_id, item_number, trait, response_value, response_time_ms, theta_before, theta_after, se_before, se_after, fisher_information, presentation_order, timestamp) VALUES ($1::VARCHAR, $2::VARCHAR, $3::INTEGER, $4::VARCHAR, $5::INTEGER, $6::INTEGER, $7::FLOAT, $8::FLOAT, $9::FLOAT, $10::FLOAT, $11::FLOAT, $12::INTEGER, $13::TIMESTAMP WITHOUT TIME ZONE)
+
+
+
+2025-12-25 14:58:19,800 INFO sqlalchemy.engine.Engine [cached since 9.992s ago] ('3daa3046-7d85-404a-9d11-1fb59a27d329', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a', 24, 'honesty_humility', 5, None, -0.5352902218674543, np.float64(-0.6595095865740281), 0.7590841950524343, np.float64(0.6504333418456199), np.float64(1.512935219872464), 12, datetime.datetime(2025, 12, 25, 14, 58, 19, 800188))
+
+
+
+2025-12-25 14:58:19,801 INFO sqlalchemy.engine.Engine COMMIT
+
+
+
+INFO:     163.180.138.90:0 - "POST /api/dose/2629d377-2be9-4a7f-8c2f-f5f6254cae9a/respond HTTP/1.1" 200 OK
+
+
+
+2025-12-25 14:58:20,257 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+
+
+
+2025-12-25 14:58:20,257 INFO sqlalchemy.engine.Engine SELECT assessment_sessions.id, assessment_sessions.participant_id, assessment_sessions.session_type, assessment_sessions.sequence_number, assessment_sessions.status, assessment_sessions.started_at, assessment_sessions.completed_at, assessment_sessions.duration_seconds, assessment_sessions.current_theta, assessment_sessions.current_se, assessment_sessions.items_administered, assessment_sessions.dose_state, assessment_sessions.conversation_state, assessment_sessions.turn_count 
+
+
+
+FROM assessment_sessions 
+
+
+
+WHERE assessment_sessions.id = $1::VARCHAR
+
+
+
+2025-12-25 14:58:20,257 INFO sqlalchemy.engine.Engine [cached since 10.64s ago] ('2629d377-2be9-4a7f-8c2f-f5f6254cae9a',)
+
+
+
+2025-12-25 14:58:20,608 INFO sqlalchemy.engine.Engine UPDATE assessment_sessions SET current_theta=$1::JSON, current_se=$2::JSON, items_administered=$3::INTEGER, dose_state=$4::JSON WHERE assessment_sessions.id = $5::VARCHAR
+
+
+
+2025-12-25 14:58:20,608 INFO sqlalchemy.engine.Engine [cached since 10.8s ago] ('{"extraversion": 0.004147045942139382, "agreeableness": -0.35662934799738877, "conscientiousness": -0.2763169266378649, "neuroticism": 0.6272361029300104, "openness": -0.7367600643471012, "honesty_humility": -0.6595095865740281}', '{"extraversion": 0.6727107879449845, "agreeableness": 0.6560496468206666, "conscientiousness": 0.7761535291978755, "neuroticism": 0.7434939381720432, "openness": 0.6988647393270395, "honesty_humility": 0.6504333418456199}', 13, '{"trait_states": {"extraversion": {"trait": "extraversion", "theta_estimate": 0.004147045942139382, "standard_error": 0.6727107879449845, "posterior_ ... (5008 characters truncated) ... 7045942139382, "se_before": 0.7361936791020116, "se_after": 0.6727107879449845, "fisher_information": 0.9243394772584134, "presentation_order": 13}]}', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a')
+
+
+
+2025-12-25 14:58:20,695 INFO sqlalchemy.engine.Engine INSERT INTO item_responses (id, session_id, item_number, trait, response_value, response_time_ms, theta_before, theta_after, se_before, se_after, fisher_information, presentation_order, timestamp) VALUES ($1::VARCHAR, $2::VARCHAR, $3::INTEGER, $4::VARCHAR, $5::INTEGER, $6::INTEGER, $7::FLOAT, $8::FLOAT, $9::FLOAT, $10::FLOAT, $11::FLOAT, $12::INTEGER, $13::TIMESTAMP WITHOUT TIME ZONE)
+
+
+
+2025-12-25 14:58:20,695 INFO sqlalchemy.engine.Engine [cached since 10.89s ago] ('65f04905-55df-451d-b37a-9e3cb12af86c', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a', 23, 'extraversion', 5, None, -0.11588144055020225, np.float64(0.004147045942139382), 0.7361936791020116, np.float64(0.6727107879449845), np.float64(0.9243394772584134), 13, datetime.datetime(2025, 12, 25, 14, 58, 20, 695164))
+
+
+
+2025-12-25 14:58:20,699 INFO sqlalchemy.engine.Engine COMMIT
+
+
+
+INFO:     163.180.138.90:0 - "POST /api/dose/2629d377-2be9-4a7f-8c2f-f5f6254cae9a/respond HTTP/1.1" 200 OK
+
+
+
+2025-12-25 14:58:20,938 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+
+
+
+2025-12-25 14:58:20,938 INFO sqlalchemy.engine.Engine SELECT assessment_sessions.id, assessment_sessions.participant_id, assessment_sessions.session_type, assessment_sessions.sequence_number, assessment_sessions.status, assessment_sessions.started_at, assessment_sessions.completed_at, assessment_sessions.duration_seconds, assessment_sessions.current_theta, assessment_sessions.current_se, assessment_sessions.items_administered, assessment_sessions.dose_state, assessment_sessions.conversation_state, assessment_sessions.turn_count 
+
+
+
+FROM assessment_sessions 
+
+
+
+WHERE assessment_sessions.id = $1::VARCHAR
+
+
+
+2025-12-25 14:58:20,939 INFO sqlalchemy.engine.Engine [cached since 11.32s ago] ('2629d377-2be9-4a7f-8c2f-f5f6254cae9a',)
+
+
+
+2025-12-25 14:58:21,299 INFO sqlalchemy.engine.Engine UPDATE assessment_sessions SET current_theta=$1::JSON, current_se=$2::JSON, items_administered=$3::INTEGER, dose_state=$4::JSON WHERE assessment_sessions.id = $5::VARCHAR
+
+
+
+2025-12-25 14:58:21,299 INFO sqlalchemy.engine.Engine [cached since 11.49s ago] ('{"extraversion": 0.004147045942139382, "agreeableness": -0.5578570897008139, "conscientiousness": -0.2763169266378649, "neuroticism": 0.6272361029300104, "openness": -0.7367600643471012, "honesty_humility": -0.6595095865740281}', '{"extraversion": 0.6727107879449845, "agreeableness": 0.6238709603978242, "conscientiousness": 0.7761535291978755, "neuroticism": 0.7434939381720432, "openness": 0.6988647393270395, "honesty_humility": 0.6504333418456199}', 14, '{"trait_states": {"extraversion": {"trait": "extraversion", "theta_estimate": 0.004147045942139382, "standard_error": 0.6727107879449845, "posterior_ ... (5287 characters truncated) ... 8570897008139, "se_before": 0.6560496468206666, "se_after": 0.6238709603978242, "fisher_information": 0.6437764357089858, "presentation_order": 14}]}', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a')
+
+
+
+2025-12-25 14:58:21,302 INFO sqlalchemy.engine.Engine INSERT INTO item_responses (id, session_id, item_number, trait, response_value, response_time_ms, theta_before, theta_after, se_before, se_after, fisher_information, presentation_order, timestamp) VALUES ($1::VARCHAR, $2::VARCHAR, $3::INTEGER, $4::VARCHAR, $5::INTEGER, $6::INTEGER, $7::FLOAT, $8::FLOAT, $9::FLOAT, $10::FLOAT, $11::FLOAT, $12::INTEGER, $13::TIMESTAMP WITHOUT TIME ZONE)
+
+
+
+2025-12-25 14:58:21,302 INFO sqlalchemy.engine.Engine [cached since 11.49s ago] ('aea0f3ca-7d74-4447-9121-6a66efe5eb33', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a', 20, 'agreeableness', 5, None, -0.35662934799738877, np.float64(-0.5578570897008139), 0.6560496468206666, np.float64(0.6238709603978242), np.float64(0.6437764357089858), 14, datetime.datetime(2025, 12, 25, 14, 58, 21, 302159))
+
+
+
+2025-12-25 14:58:21,303 INFO sqlalchemy.engine.Engine COMMIT
+
+
+
+INFO:     163.180.138.90:0 - "POST /api/dose/2629d377-2be9-4a7f-8c2f-f5f6254cae9a/respond HTTP/1.1" 200 OK
+
+
+
+2025-12-25 14:58:21,929 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+
+
+
+2025-12-25 14:58:21,929 INFO sqlalchemy.engine.Engine SELECT assessment_sessions.id, assessment_sessions.participant_id, assessment_sessions.session_type, assessment_sessions.sequence_number, assessment_sessions.status, assessment_sessions.started_at, assessment_sessions.completed_at, assessment_sessions.duration_seconds, assessment_sessions.current_theta, assessment_sessions.current_se, assessment_sessions.items_administered, assessment_sessions.dose_state, assessment_sessions.conversation_state, assessment_sessions.turn_count 
+
+
+
+FROM assessment_sessions 
+
+
+
+WHERE assessment_sessions.id = $1::VARCHAR
+
+
+
+2025-12-25 14:58:21,929 INFO sqlalchemy.engine.Engine [cached since 12.31s ago] ('2629d377-2be9-4a7f-8c2f-f5f6254cae9a',)
+
+
+
+2025-12-25 14:58:22,209 INFO sqlalchemy.engine.Engine UPDATE assessment_sessions SET current_theta=$1::JSON, current_se=$2::JSON, items_administered=$3::INTEGER, dose_state=$4::JSON WHERE assessment_sessions.id = $5::VARCHAR
+
+
+
+2025-12-25 14:58:22,209 INFO sqlalchemy.engine.Engine [cached since 12.4s ago] ('{"extraversion": 0.004147045942139382, "agreeableness": -0.5578570897008139, "conscientiousness": -0.2763169266378649, "neuroticism": 0.6272361029300104, "openness": -0.7367600643471012, "honesty_humility": -0.8064777887076618}', '{"extraversion": 0.6727107879449845, "agreeableness": 0.6238709603978242, "conscientiousness": 0.7761535291978755, "neuroticism": 0.7434939381720432, "openness": 0.6988647393270395, "honesty_humility": 0.5771216958300706}', 15, '{"trait_states": {"extraversion": {"trait": "extraversion", "theta_estimate": 0.004147045942139382, "standard_error": 0.6727107879449845, "posterior_ ... (5570 characters truncated) ... 4777887076618, "se_before": 0.6504333418456199, "se_after": 0.5771216958300706, "fisher_information": 1.4693062457821973, "presentation_order": 15}]}', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a')
+
+
+
+2025-12-25 14:58:22,295 INFO sqlalchemy.engine.Engine INSERT INTO item_responses (id, session_id, item_number, trait, response_value, response_time_ms, theta_before, theta_after, se_before, se_after, fisher_information, presentation_order, timestamp) VALUES ($1::VARCHAR, $2::VARCHAR, $3::INTEGER, $4::VARCHAR, $5::INTEGER, $6::INTEGER, $7::FLOAT, $8::FLOAT, $9::FLOAT, $10::FLOAT, $11::FLOAT, $12::INTEGER, $13::TIMESTAMP WITHOUT TIME ZONE)
+
+
+
+2025-12-25 14:58:22,295 INFO sqlalchemy.engine.Engine [cached since 12.49s ago] ('2690f75c-9a71-4684-a6fe-009c2ee7c85d', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a', 12, 'honesty_humility', 5, None, -0.6595095865740281, np.float64(-0.8064777887076618), 0.6504333418456199, np.float64(0.5771216958300706), np.float64(1.4693062457821973), 15, datetime.datetime(2025, 12, 25, 14, 58, 22, 295257))
+
+
+
+2025-12-25 14:58:22,297 INFO sqlalchemy.engine.Engine COMMIT
+
+
+
+INFO:     163.180.138.90:0 - "POST /api/dose/2629d377-2be9-4a7f-8c2f-f5f6254cae9a/respond HTTP/1.1" 200 OK
+
+
+
+2025-12-25 14:58:22,569 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+
+
+
+2025-12-25 14:58:22,569 INFO sqlalchemy.engine.Engine SELECT assessment_sessions.id, assessment_sessions.participant_id, assessment_sessions.session_type, assessment_sessions.sequence_number, assessment_sessions.status, assessment_sessions.started_at, assessment_sessions.completed_at, assessment_sessions.duration_seconds, assessment_sessions.current_theta, assessment_sessions.current_se, assessment_sessions.items_administered, assessment_sessions.dose_state, assessment_sessions.conversation_state, assessment_sessions.turn_count 
+
+
+
+FROM assessment_sessions 
+
+
+
+WHERE assessment_sessions.id = $1::VARCHAR
+
+
+
+2025-12-25 14:58:22,570 INFO sqlalchemy.engine.Engine [cached since 12.95s ago] ('2629d377-2be9-4a7f-8c2f-f5f6254cae9a',)
+
+
+
+2025-12-25 14:58:23,009 INFO sqlalchemy.engine.Engine UPDATE assessment_sessions SET current_theta=$1::JSON, current_se=$2::JSON, items_administered=$3::INTEGER, dose_state=$4::JSON WHERE assessment_sessions.id = $5::VARCHAR
+
+
+
+2025-12-25 14:58:23,009 INFO sqlalchemy.engine.Engine [cached since 13.2s ago] ('{"extraversion": 0.004147045942139382, "agreeableness": -0.5578570897008139, "conscientiousness": -0.2763169266378649, "neuroticism": 0.6272361029300104, "openness": -0.8822710917868919, "honesty_humility": -0.8064777887076618}', '{"extraversion": 0.6727107879449845, "agreeableness": 0.6238709603978242, "conscientiousness": 0.7761535291978755, "neuroticism": 0.7434939381720432, "openness": 0.6520261367722541, "honesty_humility": 0.5771216958300706}', 16, '{"trait_states": {"extraversion": {"trait": "extraversion", "theta_estimate": 0.004147045942139382, "standard_error": 0.6727107879449845, "posterior_ ... (5845 characters truncated) ... 2710917868919, "se_before": 0.6988647393270395, "se_after": 0.6520261367722541, "fisher_information": 0.7029454758093377, "presentation_order": 16}]}', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a')
+
+
+
+2025-12-25 14:58:23,095 INFO sqlalchemy.engine.Engine INSERT INTO item_responses (id, session_id, item_number, trait, response_value, response_time_ms, theta_before, theta_after, se_before, se_after, fisher_information, presentation_order, timestamp) VALUES ($1::VARCHAR, $2::VARCHAR, $3::INTEGER, $4::VARCHAR, $5::INTEGER, $6::INTEGER, $7::FLOAT, $8::FLOAT, $9::FLOAT, $10::FLOAT, $11::FLOAT, $12::INTEGER, $13::TIMESTAMP WITHOUT TIME ZONE)
+
+
+
+2025-12-25 14:58:23,095 INFO sqlalchemy.engine.Engine [cached since 13.29s ago] ('5d05e0f9-96ee-4c4d-be3e-b17753003674', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a', 13, 'openness', 5, None, -0.7367600643471012, np.float64(-0.8822710917868919), 0.6988647393270395, np.float64(0.6520261367722541), np.float64(0.7029454758093377), 16, datetime.datetime(2025, 12, 25, 14, 58, 23, 95306))
+
+
+
+2025-12-25 14:58:23,098 INFO sqlalchemy.engine.Engine COMMIT
+
+
+
+INFO:     163.180.138.90:0 - "POST /api/dose/2629d377-2be9-4a7f-8c2f-f5f6254cae9a/respond HTTP/1.1" 200 OK
+
+
+
+2025-12-25 14:58:23,857 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+
+
+
+2025-12-25 14:58:23,857 INFO sqlalchemy.engine.Engine SELECT assessment_sessions.id, assessment_sessions.participant_id, assessment_sessions.session_type, assessment_sessions.sequence_number, assessment_sessions.status, assessment_sessions.started_at, assessment_sessions.completed_at, assessment_sessions.duration_seconds, assessment_sessions.current_theta, assessment_sessions.current_se, assessment_sessions.items_administered, assessment_sessions.dose_state, assessment_sessions.conversation_state, assessment_sessions.turn_count 
+
+
+
+FROM assessment_sessions 
+
+
+
+WHERE assessment_sessions.id = $1::VARCHAR
+
+
+
+2025-12-25 14:58:23,857 INFO sqlalchemy.engine.Engine [cached since 14.24s ago] ('2629d377-2be9-4a7f-8c2f-f5f6254cae9a',)
+
+
+
+2025-12-25 14:58:24,202 INFO sqlalchemy.engine.Engine UPDATE assessment_sessions SET current_theta=$1::JSON, current_se=$2::JSON, items_administered=$3::INTEGER, dose_state=$4::JSON WHERE assessment_sessions.id = $5::VARCHAR
+
+
+
+2025-12-25 14:58:24,202 INFO sqlalchemy.engine.Engine [cached since 14.4s ago] ('{"extraversion": -0.1456779909644589, "agreeableness": -0.5578570897008139, "conscientiousness": -0.2763169266378649, "neuroticism": 0.6272361029300104, "openness": -0.8822710917868919, "honesty_humility": -0.8064777887076618}', '{"extraversion": 0.633932969055457, "agreeableness": 0.6238709603978242, "conscientiousness": 0.7761535291978755, "neuroticism": 0.7434939381720432, "openness": 0.6520261367722541, "honesty_humility": 0.5771216958300706}', 17, '{"trait_states": {"extraversion": {"trait": "extraversion", "theta_estimate": -0.1456779909644589, "standard_error": 0.633932969055457, "posterior_me ... (6118 characters truncated) ... 56779909644589, "se_before": 0.6727107879449845, "se_after": 0.633932969055457, "fisher_information": 0.7544256886679799, "presentation_order": 17}]}', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a')
+
+
+
+2025-12-25 14:58:24,204 INFO sqlalchemy.engine.Engine INSERT INTO item_responses (id, session_id, item_number, trait, response_value, response_time_ms, theta_before, theta_after, se_before, se_after, fisher_information, presentation_order, timestamp) VALUES ($1::VARCHAR, $2::VARCHAR, $3::INTEGER, $4::VARCHAR, $5::INTEGER, $6::INTEGER, $7::FLOAT, $8::FLOAT, $9::FLOAT, $10::FLOAT, $11::FLOAT, $12::INTEGER, $13::TIMESTAMP WITHOUT TIME ZONE)
+
+
+
+2025-12-25 14:58:24,204 INFO sqlalchemy.engine.Engine [cached since 14.4s ago] ('cd93fe37-8638-4d41-83c3-90585a1fd094', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a', 7, 'extraversion', 5, None, 0.004147045942139382, np.float64(-0.1456779909644589), 0.6727107879449845, np.float64(0.633932969055457), np.float64(0.7544256886679799), 17, datetime.datetime(2025, 12, 25, 14, 58, 24, 204316))
+
+
+
+2025-12-25 14:58:24,205 INFO sqlalchemy.engine.Engine COMMIT
+
+
+
+INFO:     163.180.138.90:0 - "POST /api/dose/2629d377-2be9-4a7f-8c2f-f5f6254cae9a/respond HTTP/1.1" 200 OK
+
+
+
+2025-12-25 14:58:24,612 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+
+
+
+2025-12-25 14:58:24,613 INFO sqlalchemy.engine.Engine SELECT assessment_sessions.id, assessment_sessions.participant_id, assessment_sessions.session_type, assessment_sessions.sequence_number, assessment_sessions.status, assessment_sessions.started_at, assessment_sessions.completed_at, assessment_sessions.duration_seconds, assessment_sessions.current_theta, assessment_sessions.current_se, assessment_sessions.items_administered, assessment_sessions.dose_state, assessment_sessions.conversation_state, assessment_sessions.turn_count 
+
+
+
+FROM assessment_sessions 
+
+
+
+WHERE assessment_sessions.id = $1::VARCHAR
+
+
+
+2025-12-25 14:58:24,613 INFO sqlalchemy.engine.Engine [cached since 15s ago] ('2629d377-2be9-4a7f-8c2f-f5f6254cae9a',)
+
+
+
+2025-12-25 14:58:25,196 INFO sqlalchemy.engine.Engine UPDATE assessment_sessions SET current_theta=$1::JSON, current_se=$2::JSON, items_administered=$3::INTEGER, dose_state=$4::JSON WHERE assessment_sessions.id = $5::VARCHAR
+
+
+
+2025-12-25 14:58:25,196 INFO sqlalchemy.engine.Engine [cached since 15.39s ago] ('{"extraversion": -0.1456779909644589, "agreeableness": -0.5578570897008139, "conscientiousness": -0.2763169266378649, "neuroticism": 0.6272361029300104, "openness": -0.816190811409221, "honesty_humility": -0.8064777887076618}', '{"extraversion": 0.633932969055457, "agreeableness": 0.6238709603978242, "conscientiousness": 0.7761535291978755, "neuroticism": 0.7434939381720432, "openness": 0.6373808992132384, "honesty_humility": 0.5771216958300706}', 18, '{"trait_states": {"extraversion": {"trait": "extraversion", "theta_estimate": -0.1456779909644589, "standard_error": 0.633932969055457, "posterior_me ... (6387 characters truncated) ... 6190811409221, "se_before": 0.6520261367722541, "se_after": 0.6373808992132384, "fisher_information": 0.3278590405968786, "presentation_order": 18}]}', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a')
+
+
+
+2025-12-25 14:58:25,197 INFO sqlalchemy.engine.Engine INSERT INTO item_responses (id, session_id, item_number, trait, response_value, response_time_ms, theta_before, theta_after, se_before, se_after, fisher_information, presentation_order, timestamp) VALUES ($1::VARCHAR, $2::VARCHAR, $3::INTEGER, $4::VARCHAR, $5::INTEGER, $6::INTEGER, $7::FLOAT, $8::FLOAT, $9::FLOAT, $10::FLOAT, $11::FLOAT, $12::INTEGER, $13::TIMESTAMP WITHOUT TIME ZONE)
+
+
+
+2025-12-25 14:58:25,198 INFO sqlalchemy.engine.Engine [cached since 15.39s ago] ('6493018b-d7f6-4b93-b14f-17e69eaafa2f', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a', 5, 'openness', 5, None, -0.8822710917868919, np.float64(-0.816190811409221), 0.6520261367722541, np.float64(0.6373808992132384), np.float64(0.3278590405968786), 18, datetime.datetime(2025, 12, 25, 14, 58, 25, 197935))
+
+
+
+2025-12-25 14:58:25,198 INFO sqlalchemy.engine.Engine COMMIT
+
+
+
+INFO:     163.180.138.90:0 - "POST /api/dose/2629d377-2be9-4a7f-8c2f-f5f6254cae9a/respond HTTP/1.1" 200 OK
+
+
+
+2025-12-25 14:58:25,434 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+
+
+
+2025-12-25 14:58:25,434 INFO sqlalchemy.engine.Engine SELECT assessment_sessions.id, assessment_sessions.participant_id, assessment_sessions.session_type, assessment_sessions.sequence_number, assessment_sessions.status, assessment_sessions.started_at, assessment_sessions.completed_at, assessment_sessions.duration_seconds, assessment_sessions.current_theta, assessment_sessions.current_se, assessment_sessions.items_administered, assessment_sessions.dose_state, assessment_sessions.conversation_state, assessment_sessions.turn_count 
+
+
+
+FROM assessment_sessions 
+
+
+
+WHERE assessment_sessions.id = $1::VARCHAR
+
+
+
+2025-12-25 14:58:25,434 INFO sqlalchemy.engine.Engine [cached since 15.82s ago] ('2629d377-2be9-4a7f-8c2f-f5f6254cae9a',)
+
+
+
+2025-12-25 14:58:25,803 INFO sqlalchemy.engine.Engine UPDATE assessment_sessions SET current_theta=$1::JSON, current_se=$2::JSON, items_administered=$3::INTEGER, dose_state=$4::JSON WHERE assessment_sessions.id = $5::VARCHAR
+
+
+
+2025-12-25 14:58:25,803 INFO sqlalchemy.engine.Engine [cached since 16s ago] ('{"extraversion": -0.1456779909644589, "agreeableness": -0.5578570897008139, "conscientiousness": -0.3354192661458759, "neuroticism": 0.6272361029300104, "openness": -0.816190811409221, "honesty_humility": -0.8064777887076618}', '{"extraversion": 0.633932969055457, "agreeableness": 0.6238709603978242, "conscientiousness": 0.7086403819291225, "neuroticism": 0.7434939381720432, "openness": 0.6373808992132384, "honesty_humility": 0.5771216958300706}', 19, '{"trait_states": {"extraversion": {"trait": "extraversion", "theta_estimate": -0.1456779909644589, "standard_error": 0.633932969055457, "posterior_me ... (6671 characters truncated) ... 54192661458759, "se_before": 0.7761535291978755, "se_after": 0.7086403819291225, "fisher_information": 0.693788624193459, "presentation_order": 19}]}', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a')
+
+
+
+2025-12-25 14:58:25,804 INFO sqlalchemy.engine.Engine INSERT INTO item_responses (id, session_id, item_number, trait, response_value, response_time_ms, theta_before, theta_after, se_before, se_after, fisher_information, presentation_order, timestamp) VALUES ($1::VARCHAR, $2::VARCHAR, $3::INTEGER, $4::VARCHAR, $5::INTEGER, $6::INTEGER, $7::FLOAT, $8::FLOAT, $9::FLOAT, $10::FLOAT, $11::FLOAT, $12::INTEGER, $13::TIMESTAMP WITHOUT TIME ZONE)
+
+
+
+2025-12-25 14:58:25,805 INFO sqlalchemy.engine.Engine [cached since 16s ago] ('b1ffd6af-9f2b-4c13-90a5-269e087684c1', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a', 10, 'conscientiousness', 5, None, -0.2763169266378649, np.float64(-0.3354192661458759), 0.7761535291978755, np.float64(0.7086403819291225), np.float64(0.693788624193459), 19, datetime.datetime(2025, 12, 25, 14, 58, 25, 804920))
+
+
+
+2025-12-25 14:58:25,805 INFO sqlalchemy.engine.Engine COMMIT
+
+
+
+INFO:     163.180.138.90:0 - "POST /api/dose/2629d377-2be9-4a7f-8c2f-f5f6254cae9a/respond HTTP/1.1" 200 OK
+
+
+
+2025-12-25 14:58:26,351 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+
+
+
+2025-12-25 14:58:26,351 INFO sqlalchemy.engine.Engine SELECT assessment_sessions.id, assessment_sessions.participant_id, assessment_sessions.session_type, assessment_sessions.sequence_number, assessment_sessions.status, assessment_sessions.started_at, assessment_sessions.completed_at, assessment_sessions.duration_seconds, assessment_sessions.current_theta, assessment_sessions.current_se, assessment_sessions.items_administered, assessment_sessions.dose_state, assessment_sessions.conversation_state, assessment_sessions.turn_count 
+
+
+
+FROM assessment_sessions 
+
+
+
+WHERE assessment_sessions.id = $1::VARCHAR
+
+
+
+2025-12-25 14:58:26,351 INFO sqlalchemy.engine.Engine [cached since 16.74s ago] ('2629d377-2be9-4a7f-8c2f-f5f6254cae9a',)
+
+
+
+2025-12-25 14:58:26,707 INFO sqlalchemy.engine.Engine UPDATE assessment_sessions SET current_theta=$1::JSON, current_se=$2::JSON, items_administered=$3::INTEGER, dose_state=$4::JSON WHERE assessment_sessions.id = $5::VARCHAR
+
+
+
+2025-12-25 14:58:26,707 INFO sqlalchemy.engine.Engine [cached since 16.9s ago] ('{"extraversion": -0.1456779909644589, "agreeableness": -0.5578570897008139, "conscientiousness": -0.3354192661458759, "neuroticism": 0.530916708599752, "openness": -0.816190811409221, "honesty_humility": -0.8064777887076618}', '{"extraversion": 0.633932969055457, "agreeableness": 0.6238709603978242, "conscientiousness": 0.7086403819291225, "neuroticism": 0.6983776192194023, "openness": 0.6373808992132384, "honesty_humility": 0.5771216958300706}', 20, '{"trait_states": {"extraversion": {"trait": "extraversion", "theta_estimate": -0.1456779909644589, "standard_error": 0.633932969055457, "posterior_me ... (6944 characters truncated) ... 0916708599752, "se_before": 0.7434939381720432, "se_after": 0.6983776192194023, "fisher_information": 0.5775025545146473, "presentation_order": 20}]}', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a')
+
+
+
+2025-12-25 14:58:26,709 INFO sqlalchemy.engine.Engine INSERT INTO item_responses (id, session_id, item_number, trait, response_value, response_time_ms, theta_before, theta_after, se_before, se_after, fisher_information, presentation_order, timestamp) VALUES ($1::VARCHAR, $2::VARCHAR, $3::INTEGER, $4::VARCHAR, $5::INTEGER, $6::INTEGER, $7::FLOAT, $8::FLOAT, $9::FLOAT, $10::FLOAT, $11::FLOAT, $12::INTEGER, $13::TIMESTAMP WITHOUT TIME ZONE)
+
+
+
+2025-12-25 14:58:26,709 INFO sqlalchemy.engine.Engine [cached since 16.9s ago] ('cde1a793-c7e5-4bb6-81f9-2bbe7723ec27', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a', 15, 'neuroticism', 5, None, 0.6272361029300104, np.float64(0.530916708599752), 0.7434939381720432, np.float64(0.6983776192194023), np.float64(0.5775025545146473), 20, datetime.datetime(2025, 12, 25, 14, 58, 26, 709213))
+
+
+
+2025-12-25 14:58:26,795 INFO sqlalchemy.engine.Engine COMMIT
+
+
+
+INFO:     163.180.138.90:0 - "POST /api/dose/2629d377-2be9-4a7f-8c2f-f5f6254cae9a/respond HTTP/1.1" 200 OK
+
+
+
+2025-12-25 14:58:27,138 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+
+
+
+2025-12-25 14:58:27,139 INFO sqlalchemy.engine.Engine SELECT assessment_sessions.id, assessment_sessions.participant_id, assessment_sessions.session_type, assessment_sessions.sequence_number, assessment_sessions.status, assessment_sessions.started_at, assessment_sessions.completed_at, assessment_sessions.duration_seconds, assessment_sessions.current_theta, assessment_sessions.current_se, assessment_sessions.items_administered, assessment_sessions.dose_state, assessment_sessions.conversation_state, assessment_sessions.turn_count 
+
+
+
+FROM assessment_sessions 
+
+
+
+WHERE assessment_sessions.id = $1::VARCHAR
+
+
+
+2025-12-25 14:58:27,139 INFO sqlalchemy.engine.Engine [cached since 17.52s ago] ('2629d377-2be9-4a7f-8c2f-f5f6254cae9a',)
+
+
+
+2025-12-25 14:58:27,599 INFO sqlalchemy.engine.Engine UPDATE assessment_sessions SET current_theta=$1::JSON, current_se=$2::JSON, items_administered=$3::INTEGER, dose_state=$4::JSON WHERE assessment_sessions.id = $5::VARCHAR
+
+
+
+2025-12-25 14:58:27,599 INFO sqlalchemy.engine.Engine [cached since 17.79s ago] ('{"extraversion": -0.1456779909644589, "agreeableness": -0.5578570897008139, "conscientiousness": -0.5650205724255815, "neuroticism": 0.530916708599752, "openness": -0.816190811409221, "honesty_humility": -0.8064777887076618}', '{"extraversion": 0.633932969055457, "agreeableness": 0.6238709603978242, "conscientiousness": 0.6755312921415071, "neuroticism": 0.6983776192194023, "openness": 0.6373808992132384, "honesty_humility": 0.5771216958300706}', 21, '{"trait_states": {"extraversion": {"trait": "extraversion", "theta_estimate": -0.1456779909644589, "standard_error": 0.633932969055457, "posterior_me ... (7228 characters truncated) ... 0205724255815, "se_before": 0.7086403819291225, "se_after": 0.6755312921415071, "fisher_information": 0.5714366247363687, "presentation_order": 21}]}', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a')
+
+
+
+2025-12-25 14:58:27,601 INFO sqlalchemy.engine.Engine INSERT INTO item_responses (id, session_id, item_number, trait, response_value, response_time_ms, theta_before, theta_after, se_before, se_after, fisher_information, presentation_order, timestamp) VALUES ($1::VARCHAR, $2::VARCHAR, $3::INTEGER, $4::VARCHAR, $5::INTEGER, $6::INTEGER, $7::FLOAT, $8::FLOAT, $9::FLOAT, $10::FLOAT, $11::FLOAT, $12::INTEGER, $13::TIMESTAMP WITHOUT TIME ZONE)
+
+
+
+2025-12-25 14:58:27,601 INFO sqlalchemy.engine.Engine [cached since 17.79s ago] ('33ef1d10-8b9d-47c7-a27f-bd579a813c87', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a', 11, 'conscientiousness', 5, None, -0.3354192661458759, np.float64(-0.5650205724255815), 0.7086403819291225, np.float64(0.6755312921415071), np.float64(0.5714366247363687), 21, datetime.datetime(2025, 12, 25, 14, 58, 27, 601161))
+
+
+
+2025-12-25 14:58:27,602 INFO sqlalchemy.engine.Engine COMMIT
+
+
+
+INFO:     163.180.138.90:0 - "POST /api/dose/2629d377-2be9-4a7f-8c2f-f5f6254cae9a/respond HTTP/1.1" 200 OK
+
+
+
+2025-12-25 14:58:28,497 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+
+
+
+2025-12-25 14:58:28,497 INFO sqlalchemy.engine.Engine SELECT assessment_sessions.id, assessment_sessions.participant_id, assessment_sessions.session_type, assessment_sessions.sequence_number, assessment_sessions.status, assessment_sessions.started_at, assessment_sessions.completed_at, assessment_sessions.duration_seconds, assessment_sessions.current_theta, assessment_sessions.current_se, assessment_sessions.items_administered, assessment_sessions.dose_state, assessment_sessions.conversation_state, assessment_sessions.turn_count 
+
+
+
+FROM assessment_sessions 
+
+
+
+WHERE assessment_sessions.id = $1::VARCHAR
+
+
+
+2025-12-25 14:58:28,497 INFO sqlalchemy.engine.Engine [cached since 18.88s ago] ('2629d377-2be9-4a7f-8c2f-f5f6254cae9a',)
+
+
+
+2025-12-25 14:58:29,002 INFO sqlalchemy.engine.Engine UPDATE assessment_sessions SET status=$1::sessionstatus, completed_at=$2::TIMESTAMP WITHOUT TIME ZONE, duration_seconds=$3::INTEGER, current_theta=$4::JSON, current_se=$5::JSON, items_administered=$6::INTEGER, dose_state=$7::JSON WHERE assessment_sessions.id = $8::VARCHAR
+
+
+
+2025-12-25 14:58:29,002 INFO sqlalchemy.engine.Engine [generated in 0.00026s] ('COMPLETED', datetime.datetime(2025, 12, 25, 14, 58, 29, 1167), 21, '{"extraversion": -0.1456779909644589, "agreeableness": -0.5578570897008139, "conscientiousness": -0.5650205724255815, "neuroticism": 0.43544185671411906, "openness": -0.816190811409221, "honesty_humility": -0.8064777887076618}', '{"extraversion": 0.633932969055457, "agreeableness": 0.6238709603978242, "conscientiousness": 0.6755312921415071, "neuroticism": 0.671703330719573, "openness": 0.6373808992132384, "honesty_humility": 0.5771216958300706}', 22, 'null', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a')
+
+
+
+2025-12-25 14:58:29,004 INFO sqlalchemy.engine.Engine INSERT INTO item_responses (id, session_id, item_number, trait, response_value, response_time_ms, theta_before, theta_after, se_before, se_after, fisher_information, presentation_order, timestamp) VALUES ($1::VARCHAR, $2::VARCHAR, $3::INTEGER, $4::VARCHAR, $5::INTEGER, $6::INTEGER, $7::FLOAT, $8::FLOAT, $9::FLOAT, $10::FLOAT, $11::FLOAT, $12::INTEGER, $13::TIMESTAMP WITHOUT TIME ZONE)
+
+
+
+2025-12-25 14:58:29,004 INFO sqlalchemy.engine.Engine [cached since 19.2s ago] ('f7fa28a6-0b6f-469e-87c2-2c32169c9038', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a', 17, 'neuroticism', 5, None, 0.530916708599752, np.float64(0.43544185671411906), 0.6983776192194023, np.float64(0.671703330719573), np.float64(0.47129461725393224), 22, datetime.datetime(2025, 12, 25, 14, 58, 29, 4824))
+
+
+
+2025-12-25 14:58:29,007 INFO sqlalchemy.engine.Engine INSERT INTO assessment_results (id, session_id, extraversion_score, agreeableness_score, conscientiousness_score, neuroticism_score, openness_score, honesty_humility_score, extraversion_se, agreeableness_se, conscientiousness_se, neuroticism_se, openness_se, honesty_humility_se, conversation_turns, total_items_administered, total_duration_seconds, item_reduction_rate, created_at) VALUES ($1::VARCHAR, $2::VARCHAR, $3::FLOAT, $4::FLOAT, $5::FLOAT, $6::FLOAT, $7::FLOAT, $8::FLOAT, $9::FLOAT, $10::FLOAT, $11::FLOAT, $12::FLOAT, $13::FLOAT, $14::FLOAT, $15::INTEGER, $16::INTEGER, $17::INTEGER, $18::FLOAT, $19::TIMESTAMP WITHOUT TIME ZONE)
+
+
+
+2025-12-25 14:58:29,007 INFO sqlalchemy.engine.Engine [generated in 0.00020s] ('d70a6d0c-fd28-4a7a-a979-66a8a209f8e2', '2629d377-2be9-4a7f-8c2f-f5f6254cae9a', np.float64(3.854322009035541), np.float64(3.442142910299186), np.float64(3.4349794275744188), np.float64(4.435441856714119), np.float64(3.183809188590779), np.float64(3.193522211292338), 0.633932969055457, 0.6238709603978242, 0.6755312921415071, np.float64(0.671703330719573), 0.6373808992132384, 0.5771216958300706, None, 22, 21, 0.08333333333333337, datetime.datetime(2025, 12, 25, 14, 58, 29, 7133))
+
+
+
+2025-12-25 14:58:29,009 INFO sqlalchemy.engine.Engine COMMIT
+
+
+
+INFO:     163.180.138.90:0 - "POST /api/dose/2629d377-2be9-4a7f-8c2f-f5f6254cae9a/respond HTTP/1.1" 200 OK
+
+
+
+2025-12-25 14:58:30,512 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+
+
+
+2025-12-25 14:58:30,512 INFO sqlalchemy.engine.Engine SELECT participants.id, participants.participant_code, participants.age, participants.gender, participants.education_level, participants.latin_square_row, participants.condition_order, participants.created_at, participants.updated_at 
+
+
+
+FROM participants 
+
+
+
+WHERE participants.id = $1::VARCHAR
+
+
+
+2025-12-25 14:58:30,512 INFO sqlalchemy.engine.Engine [cached since 24.8s ago] ('6b859a3b-4a56-4338-8ff9-aaa58dda4756',)
+
+
+
+2025-12-25 14:58:30,515 INFO sqlalchemy.engine.Engine SELECT assessment_sessions.id, assessment_sessions.participant_id, assessment_sessions.session_type, assessment_sessions.sequence_number, assessment_sessions.status, assessment_sessions.started_at, assessment_sessions.completed_at, assessment_sessions.duration_seconds, assessment_sessions.current_theta, assessment_sessions.current_se, assessment_sessions.items_administered, assessment_sessions.dose_state, assessment_sessions.conversation_state, assessment_sessions.turn_count 
+
+
+
+FROM assessment_sessions 
+
+
+
+WHERE assessment_sessions.participant_id = $1::VARCHAR AND assessment_sessions.status = $2::sessionstatus
+
+
+
+2025-12-25 14:58:30,515 INFO sqlalchemy.engine.Engine [cached since 24.81s ago] ('6b859a3b-4a56-4338-8ff9-aaa58dda4756', 'COMPLETED')
+
+
+
+INFO:     163.180.138.90:0 - "GET /api/participants/6b859a3b-4a56-4338-8ff9-aaa58dda4756/progress HTTP/1.1" 200 OK
+
+
+
+2025-12-25 14:58:30,517 INFO sqlalchemy.engine.Engine COMMIT
+
+
+
+INFO:     163.180.138.90:0 - "OPTIONS /api/survey/6b859a3b-4a56-4338-8ff9-aaa58dda4756/start HTTP/1.1" 200 OK
+
+
+
+2025-12-25 14:58:32,318 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+
+
+
+2025-12-25 14:58:32,318 INFO sqlalchemy.engine.Engine SELECT participants.id, participants.participant_code, participants.age, participants.gender, participants.education_level, participants.latin_square_row, participants.condition_order, participants.created_at, participants.updated_at 
+
+
+
+FROM participants 
+
+
+
+WHERE participants.id = $1::VARCHAR
+
+
+
+2025-12-25 14:58:32,318 INFO sqlalchemy.engine.Engine [cached since 26.61s ago] ('6b859a3b-4a56-4338-8ff9-aaa58dda4756',)
+
+
+
+2025-12-25 14:58:32,320 INFO sqlalchemy.engine.Engine SELECT assessment_sessions.id, assessment_sessions.participant_id, assessment_sessions.session_type, assessment_sessions.sequence_number, assessment_sessions.status, assessment_sessions.started_at, assessment_sessions.completed_at, assessment_sessions.duration_seconds, assessment_sessions.current_theta, assessment_sessions.current_se, assessment_sessions.items_administered, assessment_sessions.dose_state, assessment_sessions.conversation_state, assessment_sessions.turn_count 
+
+
+
+FROM assessment_sessions 
+
+
+
+WHERE assessment_sessions.participant_id = $1::VARCHAR AND assessment_sessions.session_type = $2::sessiontype AND assessment_sessions.status = $3::sessionstatus
+
+
+
+2025-12-25 14:58:32,321 INFO sqlalchemy.engine.Engine [cached since 24.34s ago] ('6b859a3b-4a56-4338-8ff9-aaa58dda4756', 'SURVEY', 'COMPLETED')
+
+
+
+2025-12-25 14:58:32,322 INFO sqlalchemy.engine.Engine INSERT INTO assessment_sessions (id, participant_id, session_type, sequence_number, status, started_at, completed_at, duration_seconds, items_administered, turn_count) VALUES ($1::VARCHAR, $2::VARCHAR, $3::sessiontype, $4::INTEGER, $5::sessionstatus, $6::TIMESTAMP WITHOUT TIME ZONE, $7::TIMESTAMP WITHOUT TIME ZONE, $8::INTEGER, $9::INTEGER, $10::INTEGER)
+
+
+
+2025-12-25 14:58:32,322 INFO sqlalchemy.engine.Engine [generated in 0.00020s] ('3fad5ce5-6d58-41cf-bd18-0a569e33a9a1', '6b859a3b-4a56-4338-8ff9-aaa58dda4756', 'SURVEY', 1, 'IN_PROGRESS', datetime.datetime(2025, 12, 25, 14, 58, 32, 322646), None, None, 0, 0)
+
+
+
+2025-12-25 14:58:32,324 INFO sqlalchemy.engine.Engine COMMIT
+
+
+
+2025-12-25 14:58:32,326 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+
+
+
+2025-12-25 14:58:32,326 INFO sqlalchemy.engine.Engine SELECT assessment_sessions.id, assessment_sessions.participant_id, assessment_sessions.session_type, assessment_sessions.sequence_number, assessment_sessions.status, assessment_sessions.started_at, assessment_sessions.completed_at, assessment_sessions.duration_seconds, assessment_sessions.current_theta, assessment_sessions.current_se, assessment_sessions.items_administered, assessment_sessions.dose_state, assessment_sessions.conversation_state, assessment_sessions.turn_count 
+
+
+
+FROM assessment_sessions 
+
+
+
+WHERE assessment_sessions.id = $1::VARCHAR
+
+
+
+2025-12-25 14:58:32,326 INFO sqlalchemy.engine.Engine [cached since 24.33s ago] ('3fad5ce5-6d58-41cf-bd18-0a569e33a9a1',)
+
+
+
+INFO:     163.180.138.90:0 - "POST /api/survey/6b859a3b-4a56-4338-8ff9-aaa58dda4756/start HTTP/1.1" 200 OK
+
+
+
+2025-12-25 14:58:32,328 INFO sqlalchemy.engine.Engine COMMIT
+
+
+
+INFO:     163.180.138.90:0 - "OPTIONS /api/survey/3fad5ce5-6d58-41cf-bd18-0a569e33a9a1/items HTTP/1.1" 200 OK
+
+
+
+2025-12-25 14:58:32,758 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+
+
+
+2025-12-25 14:58:32,758 INFO sqlalchemy.engine.Engine SELECT assessment_sessions.id, assessment_sessions.participant_id, assessment_sessions.session_type, assessment_sessions.sequence_number, assessment_sessions.status, assessment_sessions.started_at, assessment_sessions.completed_at, assessment_sessions.duration_seconds, assessment_sessions.current_theta, assessment_sessions.current_se, assessment_sessions.items_administered, assessment_sessions.dose_state, assessment_sessions.conversation_state, assessment_sessions.turn_count 
+
+
+
+FROM assessment_sessions 
+
+
+
+WHERE assessment_sessions.id = $1::VARCHAR
+
+
+
+2025-12-25 14:58:32,758 INFO sqlalchemy.engine.Engine [cached since 23.14s ago] ('3fad5ce5-6d58-41cf-bd18-0a569e33a9a1',)
+
+
+
+INFO:     163.180.138.90:0 - "GET /api/survey/3fad5ce5-6d58-41cf-bd18-0a569e33a9a1/items HTTP/1.1" 200 OK
+
+
+
+2025-12-25 14:58:32,760 INFO sqlalchemy.engine.Engine COMMIT
+
+
+
+INFO:     Shutting down
+
+
+
+INFO:     Waiting for application shutdown.
+
+
+
+INFO:     Application shutdown complete.
+
+
+
+INFO:     Finished server process [58]
+
+
+
+INFO:     163.180.138.90:0 - "OPTIONS /api/survey/3fad5ce5-6d58-41cf-bd18-0a569e33a9a1/submit HTTP/1.1" 200 OK
+
+
+
+2025-12-25 14:58:53,733 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+
+
+
+2025-12-25 14:58:53,734 INFO sqlalchemy.engine.Engine SELECT assessment_sessions.id, assessment_sessions.participant_id, assessment_sessions.session_type, assessment_sessions.sequence_number, assessment_sessions.status, assessment_sessions.started_at, assessment_sessions.completed_at, assessment_sessions.duration_seconds, assessment_sessions.current_theta, assessment_sessions.current_se, assessment_sessions.items_administered, assessment_sessions.dose_state, assessment_sessions.conversation_state, assessment_sessions.turn_count 
+
+
+
+FROM assessment_sessions 
+
+
+
+WHERE assessment_sessions.id = $1::VARCHAR
+
+
+
+2025-12-25 14:58:53,734 INFO sqlalchemy.engine.Engine [cached since 44.12s ago] ('3fad5ce5-6d58-41cf-bd18-0a569e33a9a1',)
+
+
+
+2025-12-25 14:58:53,737 INFO sqlalchemy.engine.Engine UPDATE assessment_sessions SET status=$1::sessionstatus, completed_at=$2::TIMESTAMP WITHOUT TIME ZONE, duration_seconds=$3::INTEGER, items_administered=$4::INTEGER WHERE assessment_sessions.id = $5::VARCHAR
+
+
+
+2025-12-25 14:58:53,737 INFO sqlalchemy.engine.Engine [generated in 0.00014s] ('COMPLETED', datetime.datetime(2025, 12, 25, 14, 58, 53, 736183), 21, 24, '3fad5ce5-6d58-41cf-bd18-0a569e33a9a1')
+
+
+
+2025-12-25 14:58:53,743 INFO sqlalchemy.engine.Engine INSERT INTO item_responses (id, session_id, item_number, trait, response_value, response_time_ms, theta_before, theta_after, se_before, se_after, fisher_information, presentation_order, timestamp) VALUES ($1::VARCHAR, $2::VARCHAR, $3::INTEGER, $4::VA ... 4712 characters truncated ... 307::FLOAT, $308::FLOAT, $309::FLOAT, $310::FLOAT, $311::INTEGER, $312::TIMESTAMP WITHOUT TIME ZONE)
+
+
+
+2025-12-25 14:58:53,743 INFO sqlalchemy.engine.Engine [generated in 0.00035s (insertmanyvalues) 1/1 (unordered)] ('52689418-1c2f-4be1-beef-9a773e8f7eb0', '3fad5ce5-6d58-41cf-bd18-0a569e33a9a1', 1, 'extraversion', 4, None, None, None, None, None, None, 1, datetime.datetime(2025, 12, 25, 14, 58, 53, 742727), '78a98774-df87-4c2b-aa9c-e62b1a58127a', '3fad5ce5-6d58-41cf-bd18-0a569e33a9a1', 2, 'agreeableness', 4, None, None, None, None, None, None, 2, datetime.datetime(2025, 12, 25, 14, 58, 53, 742734), '4ef0c7a3-e875-4d24-8a5c-b01af70f45c7', '3fad5ce5-6d58-41cf-bd18-0a569e33a9a1', 3, 'conscientiousness', 4, None, None, None, None, None, None, 3, datetime.datetime(2025, 12, 25, 14, 58, 53, 742738), '3ec8693a-29f3-4c04-b6f0-f40b905274b3', '3fad5ce5-6d58-41cf-bd18-0a569e33a9a1', 4, 'neuroticism', 4, None, None, None, None, None, None ... 212 parameters truncated ... 21, 'openness', 4, None, None, None, None, None, None, 21, datetime.datetime(2025, 12, 25, 14, 58, 53, 742806), '6c91a997-2d18-4a2c-be10-c1e7773805ed', '3fad5ce5-6d58-41cf-bd18-0a569e33a9a1', 22, 'conscientiousness', 4, None, None, None, None, None, None, 22, datetime.datetime(2025, 12, 25, 14, 58, 53, 742810), '6673ebe4-7971-40bf-8373-c6fa2e8cd2a5', '3fad5ce5-6d58-41cf-bd18-0a569e33a9a1', 23, 'extraversion', 4, None, None, None, None, None, None, 23, datetime.datetime(2025, 12, 25, 14, 58, 53, 742813), '700cc919-de3a-481d-9c30-a5d0b8e1b112', '3fad5ce5-6d58-41cf-bd18-0a569e33a9a1', 24, 'honesty_humility', 4, None, None, None, None, None, None, 24, datetime.datetime(2025, 12, 25, 14, 58, 53, 742817))
+
+
+
+2025-12-25 14:58:53,748 INFO sqlalchemy.engine.Engine INSERT INTO assessment_results (id, session_id, extraversion_score, agreeableness_score, conscientiousness_score, neuroticism_score, openness_score, honesty_humility_score, extraversion_se, agreeableness_se, conscientiousness_se, neuroticism_se, openness_se, honesty_humility_se, conversation_turns, total_items_administered, total_duration_seconds, item_reduction_rate, created_at) VALUES ($1::VARCHAR, $2::VARCHAR, $3::FLOAT, $4::FLOAT, $5::FLOAT, $6::FLOAT, $7::FLOAT, $8::FLOAT, $9::FLOAT, $10::FLOAT, $11::FLOAT, $12::FLOAT, $13::FLOAT, $14::FLOAT, $15::INTEGER, $16::INTEGER, $17::INTEGER, $18::FLOAT, $19::TIMESTAMP WITHOUT TIME ZONE)
+
+
+
+2025-12-25 14:58:53,748 INFO sqlalchemy.engine.Engine [cached since 24.74s ago] ('c7cf7182-389b-4ae5-b962-a4585808c3cc', '3fad5ce5-6d58-41cf-bd18-0a569e33a9a1', 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, None, None, None, None, None, None, None, 24, 21, None, datetime.datetime(2025, 12, 25, 14, 58, 53, 748497))
+
+
+
+2025-12-25 14:58:53,751 INFO sqlalchemy.engine.Engine COMMIT
+
+
+
+2025-12-25 14:58:53,754 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+
+
+
+2025-12-25 14:58:53,755 INFO sqlalchemy.engine.Engine SELECT assessment_results.id, assessment_results.session_id, assessment_results.extraversion_score, assessment_results.agreeableness_score, assessment_results.conscientiousness_score, assessment_results.neuroticism_score, assessment_results.openness_score, assessment_results.honesty_humility_score, assessment_results.extraversion_se, assessment_results.agreeableness_se, assessment_results.conscientiousness_se, assessment_results.neuroticism_se, assessment_results.openness_se, assessment_results.honesty_humility_se, assessment_results.llm_reasoning, assessment_results.conversation_turns, assessment_results.total_items_administered, assessment_results.total_duration_seconds, assessment_results.item_reduction_rate, assessment_results.created_at 
+
+
+
+FROM assessment_results 
+
+
+
+WHERE assessment_results.id = $1::VARCHAR
+
+
+
+2025-12-25 14:58:53,755 INFO sqlalchemy.engine.Engine [generated in 0.00011s] ('c7cf7182-389b-4ae5-b962-a4585808c3cc',)
+
+
+
+INFO:     163.180.138.90:0 - "POST /api/survey/3fad5ce5-6d58-41cf-bd18-0a569e33a9a1/submit HTTP/1.1" 200 OK
+
+
+
+2025-12-25 14:58:53,760 INFO sqlalchemy.engine.Engine COMMIT
+
+
+
+2025-12-25 14:58:54,462 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+
+
+
+2025-12-25 14:58:54,463 INFO sqlalchemy.engine.Engine SELECT participants.id, participants.participant_code, participants.age, participants.gender, participants.education_level, participants.latin_square_row, participants.condition_order, participants.created_at, participants.updated_at 
+
+
+
+FROM participants 
+
+
+
+WHERE participants.id = $1::VARCHAR
+
+
+
+2025-12-25 14:58:54,463 INFO sqlalchemy.engine.Engine [cached since 48.76s ago] ('6b859a3b-4a56-4338-8ff9-aaa58dda4756',)
+
+
+
+2025-12-25 14:58:54,466 INFO sqlalchemy.engine.Engine SELECT assessment_sessions.id, assessment_sessions.participant_id, assessment_sessions.session_type, assessment_sessions.sequence_number, assessment_sessions.status, assessment_sessions.started_at, assessment_sessions.completed_at, assessment_sessions.duration_seconds, assessment_sessions.current_theta, assessment_sessions.current_se, assessment_sessions.items_administered, assessment_sessions.dose_state, assessment_sessions.conversation_state, assessment_sessions.turn_count 
+
+
+
+FROM assessment_sessions 
+
+
+
+WHERE assessment_sessions.participant_id = $1::VARCHAR AND assessment_sessions.status = $2::sessionstatus
+
+
+
+2025-12-25 14:58:54,466 INFO sqlalchemy.engine.Engine [cached since 48.76s ago] ('6b859a3b-4a56-4338-8ff9-aaa58dda4756', 'COMPLETED')
+
+
+
+INFO:     163.180.138.90:0 - "GET /api/participants/6b859a3b-4a56-4338-8ff9-aaa58dda4756/progress HTTP/1.1" 200 OK
+
+
+
+2025-12-25 14:58:54,468 INFO sqlalchemy.engine.Engine COMMIT
+
+
+
+INFO:     163.180.138.90:0 - "OPTIONS /api/results/participant/6b859a3b-4a56-4338-8ff9-aaa58dda4756 HTTP/1.1" 200 OK
+
+
+
+2025-12-25 14:58:57,043 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+
+
+
+2025-12-25 14:58:57,043 INFO sqlalchemy.engine.Engine SELECT participants.id, participants.participant_code, participants.age, participants.gender, participants.education_level, participants.latin_square_row, participants.condition_order, participants.created_at, participants.updated_at 
+
+
+
+FROM participants 
+
+
+
+WHERE participants.id = $1::VARCHAR
+
+
+
+2025-12-25 14:58:57,043 INFO sqlalchemy.engine.Engine [cached since 51.34s ago] ('6b859a3b-4a56-4338-8ff9-aaa58dda4756',)
+
+
+
+2025-12-25 14:58:57,046 INFO sqlalchemy.engine.Engine SELECT assessment_sessions.id, assessment_sessions.participant_id, assessment_sessions.session_type, assessment_sessions.sequence_number, assessment_sessions.status, assessment_sessions.started_at, assessment_sessions.completed_at, assessment_sessions.duration_seconds, assessment_sessions.current_theta, assessment_sessions.current_se, assessment_sessions.items_administered, assessment_sessions.dose_state, assessment_sessions.conversation_state, assessment_sessions.turn_count 
+
+
+
+FROM assessment_sessions 
+
+
+
+WHERE assessment_sessions.participant_id = $1::VARCHAR AND assessment_sessions.status = $2::sessionstatus ORDER BY assessment_sessions.sequence_number
+
+
+
+2025-12-25 14:58:57,046 INFO sqlalchemy.engine.Engine [generated in 0.00016s] ('6b859a3b-4a56-4338-8ff9-aaa58dda4756', 'COMPLETED')
+
+
+
+2025-12-25 14:58:57,050 INFO sqlalchemy.engine.Engine SELECT assessment_results.id, assessment_results.session_id, assessment_results.extraversion_score, assessment_results.agreeableness_score, assessment_results.conscientiousness_score, assessment_results.neuroticism_score, assessment_results.openness_score, assessment_results.honesty_humility_score, assessment_results.extraversion_se, assessment_results.agreeableness_se, assessment_results.conscientiousness_se, assessment_results.neuroticism_se, assessment_results.openness_se, assessment_results.honesty_humility_se, assessment_results.llm_reasoning, assessment_results.conversation_turns, assessment_results.total_items_administered, assessment_results.total_duration_seconds, assessment_results.item_reduction_rate, assessment_results.created_at 
+
+
+
+FROM assessment_results 
+
+
+
+WHERE assessment_results.session_id = $1::VARCHAR
+
+
+
+2025-12-25 14:58:57,050 INFO sqlalchemy.engine.Engine [generated in 0.00011s] ('3fad5ce5-6d58-41cf-bd18-0a569e33a9a1',)
+
+
+
+2025-12-25 14:58:57,057 INFO sqlalchemy.engine.Engine SELECT assessment_results.id, assessment_results.session_id, assessment_results.extraversion_score, assessment_results.agreeableness_score, assessment_results.conscientiousness_score, assessment_results.neuroticism_score, assessment_results.openness_score, assessment_results.honesty_humility_score, assessment_results.extraversion_se, assessment_results.agreeableness_se, assessment_results.conscientiousness_se, assessment_results.neuroticism_se, assessment_results.openness_se, assessment_results.honesty_humility_se, assessment_results.llm_reasoning, assessment_results.conversation_turns, assessment_results.total_items_administered, assessment_results.total_duration_seconds, assessment_results.item_reduction_rate, assessment_results.created_at 
+
+
+
+FROM assessment_results 
+
+
+
+WHERE assessment_results.session_id = $1::VARCHAR
+
+
+
+2025-12-25 14:58:57,057 INFO sqlalchemy.engine.Engine [cached since 0.007179s ago] ('2629d377-2be9-4a7f-8c2f-f5f6254cae9a',)
+
+
+
+/opt/render/project/src/.venv/lib/python3.11/site-packages/numpy/lib/_function_base_impl.py:3023: RuntimeWarning: invalid value encountered in divide
+
+
+
+2025-12-25 14:58:57,102 INFO sqlalchemy.engine.Engine ROLLBACK
+
+
+
+  c /= stddev[:, None]
+
+
+
+/opt/render/project/src/.venv/lib/python3.11/site-packages/numpy/lib/_function_base_impl.py:3024: RuntimeWarning: invalid value encountered in divide
+
+
+
+  c /= stddev[None, :]
+
+
+
+INFO:     163.180.138.90:0 - "GET /api/results/participant/6b859a3b-4a56-4338-8ff9-aaa58dda4756 HTTP/1.1" 500 Internal Server Error
+
+
+
+ERROR:    Exception in ASGI application
+
+
+
+Traceback (most recent call last):
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+
+
+
+    result = await app(  # type: ignore[func-returns-value]
+
+
+
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+
+
+
+    return await self.app(scope, receive, send)
+
+
+
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/fastapi/applications.py", line 1135, in __call__
+
+
+
+    await super().__call__(scope, receive, send)
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/starlette/applications.py", line 107, in __call__
+
+
+
+    await self.middleware_stack(scope, receive, send)
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/starlette/middleware/errors.py", line 186, in __call__
+
+
+
+    raise exc
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/starlette/middleware/errors.py", line 164, in __call__
+
+
+
+    await self.app(scope, receive, _send)
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/starlette/middleware/cors.py", line 93, in __call__
+
+
+
+    await self.simple_response(scope, receive, send, request_headers=headers)
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/starlette/middleware/cors.py", line 144, in simple_response
+
+
+
+    await self.app(scope, receive, send)
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+
+
+
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+
+
+
+    raise exc
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+
+
+
+    await app(scope, receive, sender)
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+
+
+
+    await self.app(scope, receive, send)
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/starlette/routing.py", line 716, in __call__
+
+
+
+    await self.middleware_stack(scope, receive, send)
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/starlette/routing.py", line 736, in app
+
+
+
+    await route.handle(scope, receive, send)
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/starlette/routing.py", line 290, in handle
+
+
+
+    await self.app(scope, receive, send)
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/fastapi/routing.py", line 119, in app
+
+
+
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+
+
+
+    raise exc
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+
+
+
+    await app(scope, receive, sender)
+
+
+
+  File "/opt/render/project/python/Python-3.11.0/lib/python3.11/contextlib.py", line 222, in __aexit__
+
+
+
+    await self.gen.athrow(typ, value, traceback)
+
+
+
+  File "/opt/render/project/src/backend/app/core/database.py", line 35, in get_db
+
+
+
+    yield session
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/fastapi/routing.py", line 105, in app
+
+
+
+    response = await f(request)
+
+
+
+               ^^^^^^^^^^^^^^^^
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/fastapi/routing.py", line 460, in app
+
+
+
+    response = actual_response_class(content, **response_args)
+
+
+
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/starlette/responses.py", line 189, in __init__
+
+
+
+    super().__init__(content, status_code, headers, media_type, background)
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/starlette/responses.py", line 46, in __init__
+
+
+
+    self.body = self.render(content)
+
+
+
+                ^^^^^^^^^^^^^^^^^^^^
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/starlette/responses.py", line 192, in render
+
+
+
+    return json.dumps(
+
+
+
+           ^^^^^^^^^^^
+
+
+
+  File "/opt/render/project/python/Python-3.11.0/lib/python3.11/json/__init__.py", line 238, in dumps
+
+
+
+    **kw).encode(obj)
+
+
+
+          ^^^^^^^^^^^
+
+
+
+  File "/opt/render/project/python/Python-3.11.0/lib/python3.11/json/encoder.py", line 200, in encode
+
+
+
+    chunks = self.iterencode(o, _one_shot=True)
+
+
+
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+  File "/opt/render/project/python/Python-3.11.0/lib/python3.11/json/encoder.py", line 258, in iterencode
+
+
+
+    return _iterencode(o, 0)
+
+
+
+           ^^^^^^^^^^^^^^^^^
+
+
+
+ValueError: Out of range float values are not JSON compliant
+
+
+
+2025-12-25 14:59:00,096 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+
+
+
+2025-12-25 14:59:00,096 INFO sqlalchemy.engine.Engine SELECT participants.id, participants.participant_code, participants.age, participants.gender, participants.education_level, participants.latin_square_row, participants.condition_order, participants.created_at, participants.updated_at 
+
+
+
+FROM participants 
+
+
+
+WHERE participants.id = $1::VARCHAR
+
+
+
+2025-12-25 14:59:00,096 INFO sqlalchemy.engine.Engine [cached since 54.39s ago] ('6b859a3b-4a56-4338-8ff9-aaa58dda4756',)
+
+
+
+2025-12-25 14:59:00,100 INFO sqlalchemy.engine.Engine SELECT assessment_sessions.id, assessment_sessions.participant_id, assessment_sessions.session_type, assessment_sessions.sequence_number, assessment_sessions.status, assessment_sessions.started_at, assessment_sessions.completed_at, assessment_sessions.duration_seconds, assessment_sessions.current_theta, assessment_sessions.current_se, assessment_sessions.items_administered, assessment_sessions.dose_state, assessment_sessions.conversation_state, assessment_sessions.turn_count 
+
+
+
+FROM assessment_sessions 
+
+
+
+WHERE assessment_sessions.participant_id = $1::VARCHAR AND assessment_sessions.status = $2::sessionstatus
+
+
+
+2025-12-25 14:59:00,100 INFO sqlalchemy.engine.Engine [cached since 54.39s ago] ('6b859a3b-4a56-4338-8ff9-aaa58dda4756', 'COMPLETED')
+
+
+
+INFO:     163.180.138.90:0 - "GET /api/participants/6b859a3b-4a56-4338-8ff9-aaa58dda4756/progress HTTP/1.1" 200 OK
+
+
+
+2025-12-25 14:59:00,103 INFO sqlalchemy.engine.Engine COMMIT
+
+
+
+2025-12-25 14:59:21,652 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+
+
+
+2025-12-25 14:59:21,652 INFO sqlalchemy.engine.Engine SELECT participants.id, participants.participant_code, participants.age, participants.gender, participants.education_level, participants.latin_square_row, participants.condition_order, participants.created_at, participants.updated_at 
+
+
+
+FROM participants 
+
+
+
+WHERE participants.id = $1::VARCHAR
+
+
+
+2025-12-25 14:59:21,652 INFO sqlalchemy.engine.Engine [cached since 75.94s ago] ('6b859a3b-4a56-4338-8ff9-aaa58dda4756',)
+
+
+
+2025-12-25 14:59:21,655 INFO sqlalchemy.engine.Engine SELECT assessment_sessions.id, assessment_sessions.participant_id, assessment_sessions.session_type, assessment_sessions.sequence_number, assessment_sessions.status, assessment_sessions.started_at, assessment_sessions.completed_at, assessment_sessions.duration_seconds, assessment_sessions.current_theta, assessment_sessions.current_se, assessment_sessions.items_administered, assessment_sessions.dose_state, assessment_sessions.conversation_state, assessment_sessions.turn_count 
+
+
+
+FROM assessment_sessions 
+
+
+
+WHERE assessment_sessions.participant_id = $1::VARCHAR AND assessment_sessions.status = $2::sessionstatus ORDER BY assessment_sessions.sequence_number
+
+
+
+2025-12-25 14:59:21,655 INFO sqlalchemy.engine.Engine [cached since 24.61s ago] ('6b859a3b-4a56-4338-8ff9-aaa58dda4756', 'COMPLETED')
+
+
+
+2025-12-25 14:59:21,659 INFO sqlalchemy.engine.Engine SELECT assessment_results.id, assessment_results.session_id, assessment_results.extraversion_score, assessment_results.agreeableness_score, assessment_results.conscientiousness_score, assessment_results.neuroticism_score, assessment_results.openness_score, assessment_results.honesty_humility_score, assessment_results.extraversion_se, assessment_results.agreeableness_se, assessment_results.conscientiousness_se, assessment_results.neuroticism_se, assessment_results.openness_se, assessment_results.honesty_humility_se, assessment_results.llm_reasoning, assessment_results.conversation_turns, assessment_results.total_items_administered, assessment_results.total_duration_seconds, assessment_results.item_reduction_rate, assessment_results.created_at 
+
+
+
+FROM assessment_results 
+
+
+
+WHERE assessment_results.session_id = $1::VARCHAR
+
+
+
+2025-12-25 14:59:21,659 INFO sqlalchemy.engine.Engine [cached since 24.61s ago] ('3fad5ce5-6d58-41cf-bd18-0a569e33a9a1',)
+
+
+
+2025-12-25 14:59:21,661 INFO sqlalchemy.engine.Engine SELECT assessment_results.id, assessment_results.session_id, assessment_results.extraversion_score, assessment_results.agreeableness_score, assessment_results.conscientiousness_score, assessment_results.neuroticism_score, assessment_results.openness_score, assessment_results.honesty_humility_score, assessment_results.extraversion_se, assessment_results.agreeableness_se, assessment_results.conscientiousness_se, assessment_results.neuroticism_se, assessment_results.openness_se, assessment_results.honesty_humility_se, assessment_results.llm_reasoning, assessment_results.conversation_turns, assessment_results.total_items_administered, assessment_results.total_duration_seconds, assessment_results.item_reduction_rate, assessment_results.created_at 
+
+
+
+FROM assessment_results 
+
+
+
+WHERE assessment_results.session_id = $1::VARCHAR
+
+
+
+2025-12-25 14:59:21,661 INFO sqlalchemy.engine.Engine [cached since 24.61s ago] ('2629d377-2be9-4a7f-8c2f-f5f6254cae9a',)
+
+
+
+2025-12-25 14:59:21,663 INFO sqlalchemy.engine.Engine ROLLBACK
+
+
+
+INFO:     163.180.138.90:0 - "GET /api/results/participant/6b859a3b-4a56-4338-8ff9-aaa58dda4756 HTTP/1.1" 500 Internal Server Error
+
+
+
+ERROR:    Exception in ASGI application
+
+
+
+Traceback (most recent call last):
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+
+
+
+    result = await app(  # type: ignore[func-returns-value]
+
+
+
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+
+
+
+    return await self.app(scope, receive, send)
+
+
+
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/fastapi/applications.py", line 1135, in __call__
+
+
+
+    await super().__call__(scope, receive, send)
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/starlette/applications.py", line 107, in __call__
+
+
+
+    await self.middleware_stack(scope, receive, send)
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/starlette/middleware/errors.py", line 186, in __call__
+
+
+
+    raise exc
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/starlette/middleware/errors.py", line 164, in __call__
+
+
+
+    await self.app(scope, receive, _send)
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/starlette/middleware/cors.py", line 93, in __call__
+
+
+
+    await self.simple_response(scope, receive, send, request_headers=headers)
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/starlette/middleware/cors.py", line 144, in simple_response
+
+
+
+    await self.app(scope, receive, send)
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+
+
+
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+
+
+
+    raise exc
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+
+
+
+    await app(scope, receive, sender)
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+
+
+
+    await self.app(scope, receive, send)
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/starlette/routing.py", line 716, in __call__
+
+
+
+    await self.middleware_stack(scope, receive, send)
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/starlette/routing.py", line 736, in app
+
+
+
+    await route.handle(scope, receive, send)
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/starlette/routing.py", line 290, in handle
+
+
+
+    await self.app(scope, receive, send)
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/fastapi/routing.py", line 119, in app
+
+
+
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+
+
+
+    raise exc
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+
+
+
+    await app(scope, receive, sender)
+
+
+
+  File "/opt/render/project/python/Python-3.11.0/lib/python3.11/contextlib.py", line 222, in __aexit__
+
+
+
+    await self.gen.athrow(typ, value, traceback)
+
+
+
+  File "/opt/render/project/src/backend/app/core/database.py", line 35, in get_db
+
+
+
+    yield session
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/fastapi/routing.py", line 105, in app
+
+
+
+    response = await f(request)
+
+
+
+               ^^^^^^^^^^^^^^^^
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/fastapi/routing.py", line 460, in app
+
+
+
+    response = actual_response_class(content, **response_args)
+
+
+
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/starlette/responses.py", line 189, in __init__
+
+
+
+    super().__init__(content, status_code, headers, media_type, background)
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/starlette/responses.py", line 46, in __init__
+
+
+
+    self.body = self.render(content)
+
+
+
+                ^^^^^^^^^^^^^^^^^^^^
+
+
+
+  File "/opt/render/project/src/.venv/lib/python3.11/site-packages/starlette/responses.py", line 192, in render
+
+
+
+    return json.dumps(
+
+
+
+           ^^^^^^^^^^^
+
+
+
+  File "/opt/render/project/python/Python-3.11.0/lib/python3.11/json/__init__.py", line 238, in dumps
+
+
+
+    **kw).encode(obj)
+
+
+
+          ^^^^^^^^^^^
+
+
+
+  File "/opt/render/project/python/Python-3.11.0/lib/python3.11/json/encoder.py", line 200, in encode
+
+
+
+    chunks = self.iterencode(o, _one_shot=True)
+
+
+
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+  File "/opt/render/project/python/Python-3.11.0/lib/python3.11/json/encoder.py", line 258, in iterencode
+
+
+
+    return _iterencode(o, 0)
+
+
+
+           ^^^^^^^^^^^^^^^^^
+
+
+
+ValueError: Out of range float values are not JSON compliant
+
+
+
+로그는 이래.
