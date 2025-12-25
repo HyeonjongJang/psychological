@@ -1,0 +1,238 @@
+{
+  "0.3": {
+    "metrics": {
+      "overall": {
+        "survey_true_r": 0.7288236752124864,
+        "dose_true_r": 0.7303204484725303,
+        "survey_dose_r": 0.5429968311350571,
+        "survey_true_mae": 0.542449497327901,
+        "dose_true_mae": 0.5435759773447453,
+        "survey_dose_mae": 0.5590143451788169,
+        "avg_items_per_trait": 4.0,
+        "total_items": 24.0,
+        "item_reduction_pct": 0.0
+      },
+      "per_trait": {
+        "extraversion": {
+          "survey_true_r": 0.7554235129032852,
+          "dose_true_r": 0.7404881036066184,
+          "survey_dose_r": 0.5565713124553087,
+          "avg_items": 4.0,
+          "avg_se": 0.6815070478063037
+        },
+        "agreeableness": {
+          "survey_true_r": 0.7340557637838399,
+          "dose_true_r": 0.7616587459596131,
+          "survey_dose_r": 0.582659089609622,
+          "avg_items": 4.0,
+          "avg_se": 0.6567781263011031
+        },
+        "conscientiousness": {
+          "survey_true_r": 0.6859986649848107,
+          "dose_true_r": 0.6743004048816077,
+          "survey_dose_r": 0.45105399739329255,
+          "avg_items": 4.0,
+          "avg_se": 0.7226840468000993
+        },
+        "neuroticism": {
+          "survey_true_r": 0.6889396860079289,
+          "dose_true_r": 0.6887243035807319,
+          "survey_dose_r": 0.4697840020349081,
+          "avg_items": 4.0,
+          "avg_se": 0.7105205041056438
+        },
+        "openness": {
+          "survey_true_r": 0.7378100491203687,
+          "dose_true_r": 0.7305202603650689,
+          "survey_dose_r": 0.5456096794961197,
+          "avg_items": 4.0,
+          "avg_se": 0.6844090695751024
+        },
+        "honesty_humility": {
+          "survey_true_r": 0.7669544260150263,
+          "dose_true_r": 0.7808978343689168,
+          "survey_dose_r": 0.616369299995092,
+          "avg_items": 4.0,
+          "avg_se": 0.6155875811061972
+        }
+      }
+    }
+  },
+  "0.5": {
+    "metrics": {
+      "overall": {
+        "survey_true_r": 0.7288236752124864,
+        "dose_true_r": 0.7355334067088075,
+        "survey_dose_r": 0.5479982262233614,
+        "survey_true_mae": 0.542449497327901,
+        "dose_true_mae": 0.5380216263041578,
+        "survey_dose_mae": 0.5503338972064327,
+        "avg_items_per_trait": 4.0,
+        "total_items": 24.0,
+        "item_reduction_pct": 0.0
+      },
+      "per_trait": {
+        "extraversion": {
+          "survey_true_r": 0.7554235129032852,
+          "dose_true_r": 0.7355471504476332,
+          "survey_dose_r": 0.573863642083902,
+          "avg_items": 4.0,
+          "avg_se": 0.6787439267359316
+        },
+        "agreeableness": {
+          "survey_true_r": 0.7340557637838399,
+          "dose_true_r": 0.7569390375071919,
+          "survey_dose_r": 0.5543085689712309,
+          "avg_items": 4.0,
+          "avg_se": 0.655682691186788
+        },
+        "conscientiousness": {
+          "survey_true_r": 0.6859986649848107,
+          "dose_true_r": 0.7020648627738483,
+          "survey_dose_r": 0.503685720018902,
+          "avg_items": 4.0,
+          "avg_se": 0.7209162462730825
+        },
+        "neuroticism": {
+          "survey_true_r": 0.6889396860079289,
+          "dose_true_r": 0.6949468985373516,
+          "survey_dose_r": 0.4931645072499983,
+          "avg_items": 4.0,
+          "avg_se": 0.71192204773391
+        },
+        "openness": {
+          "survey_true_r": 0.7378100491203687,
+          "dose_true_r": 0.7344787593108062,
+          "survey_dose_r": 0.5493597657459741,
+          "avg_items": 4.0,
+          "avg_se": 0.6872573170025971
+        },
+        "honesty_humility": {
+          "survey_true_r": 0.7669544260150263,
+          "dose_true_r": 0.786755981960068,
+          "survey_dose_r": 0.5965168258921718,
+          "avg_items": 4.0,
+          "avg_se": 0.6153696808422605
+        }
+      }
+    }
+  },
+  "0.65": {
+    "metrics": {
+      "overall": {
+        "survey_true_r": 0.7288236752124864,
+        "dose_true_r": 0.7258441002760958,
+        "survey_dose_r": 0.5395467822502833,
+        "survey_true_mae": 0.542449497327901,
+        "dose_true_mae": 0.5487269447718514,
+        "survey_dose_mae": 0.5565463859958316,
+        "avg_items_per_trait": 3.8116666666666665,
+        "total_items": 22.869999999999997,
+        "item_reduction_pct": 4.708333333333348
+      },
+      "per_trait": {
+        "extraversion": {
+          "survey_true_r": 0.7554235129032852,
+          "dose_true_r": 0.7347346173629554,
+          "survey_dose_r": 0.5311970381996679,
+          "avg_items": 4.0,
+          "avg_se": 0.6813947929656453
+        },
+        "agreeableness": {
+          "survey_true_r": 0.7340557637838399,
+          "dose_true_r": 0.7490460452809704,
+          "survey_dose_r": 0.561457179122711,
+          "avg_items": 3.673,
+          "avg_se": 0.6639895660530769
+        },
+        "conscientiousness": {
+          "survey_true_r": 0.6859986649848107,
+          "dose_true_r": 0.6828032151728483,
+          "survey_dose_r": 0.4730676409076555,
+          "avg_items": 4.0,
+          "avg_se": 0.7205642920266748
+        },
+        "neuroticism": {
+          "survey_true_r": 0.6889396860079289,
+          "dose_true_r": 0.6814061106095028,
+          "survey_dose_r": 0.5108386058027534,
+          "avg_items": 4.0,
+          "avg_se": 0.7129590637619915
+        },
+        "openness": {
+          "survey_true_r": 0.7378100491203687,
+          "dose_true_r": 0.7399104575683485,
+          "survey_dose_r": 0.5403937369325703,
+          "avg_items": 3.925,
+          "avg_se": 0.6868424021262617
+        },
+        "honesty_humility": {
+          "survey_true_r": 0.7669544260150263,
+          "dose_true_r": 0.7616743177307346,
+          "survey_dose_r": 0.5994846447290711,
+          "avg_items": 3.272,
+          "avg_se": 0.6408497711838477
+        }
+      }
+    }
+  },
+  "0.8": {
+    "metrics": {
+      "overall": {
+        "survey_true_r": 0.7288236752124864,
+        "dose_true_r": 0.6559475807696695,
+        "survey_dose_r": 0.4887155780337583,
+        "survey_true_mae": 0.542449497327901,
+        "dose_true_mae": 0.59946232199265,
+        "survey_dose_mae": 0.5582053061792003,
+        "avg_items_per_trait": 2.017333333333333,
+        "total_items": 12.104,
+        "item_reduction_pct": 49.56666666666667
+      },
+      "per_trait": {
+        "extraversion": {
+          "survey_true_r": 0.7554235129032852,
+          "dose_true_r": 0.6811581996882834,
+          "survey_dose_r": 0.5250706956145146,
+          "avg_items": 2.246,
+          "avg_se": 0.758576548612116
+        },
+        "agreeableness": {
+          "survey_true_r": 0.7340557637838399,
+          "dose_true_r": 0.6625324480393249,
+          "survey_dose_r": 0.5047347948740255,
+          "avg_items": 1.404,
+          "avg_se": 0.7542969531009084
+        },
+        "conscientiousness": {
+          "survey_true_r": 0.6859986649848107,
+          "dose_true_r": 0.635852700782975,
+          "survey_dose_r": 0.4411051126348863,
+          "avg_items": 2.781,
+          "avg_se": 0.7695565699492779
+        },
+        "neuroticism": {
+          "survey_true_r": 0.6889396860079289,
+          "dose_true_r": 0.6081613082530652,
+          "survey_dose_r": 0.42750722672488833,
+          "avg_items": 2.37,
+          "avg_se": 0.7632566394259364
+        },
+        "openness": {
+          "survey_true_r": 0.7378100491203687,
+          "dose_true_r": 0.6698604424541603,
+          "survey_dose_r": 0.4973773277560581,
+          "avg_items": 1.784,
+          "avg_se": 0.7603781415537868
+        },
+        "honesty_humility": {
+          "survey_true_r": 0.7669544260150263,
+          "dose_true_r": 0.6734794457852874,
+          "survey_dose_r": 0.5245063555549541,
+          "avg_items": 1.519,
+          "avg_se": 0.7452627386229163
+        }
+      }
+    }
+  }
+}

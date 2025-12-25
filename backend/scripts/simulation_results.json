@@ -1,0 +1,124 @@
+{
+  "timestamp": "2025-12-25T20:14:43.649225",
+  "config": {
+    "n_participants": 1000,
+    "seed": 42,
+    "se_threshold": 0.65,
+    "max_items_per_trait": 4,
+    "survey_items": 24
+  },
+  "metrics": {
+    "overall": {
+      "survey_vs_true_r": 0.7244756313495835,
+      "survey_vs_true_p": 0.0,
+      "dose_vs_true_r": 0.729595843996713,
+      "dose_vs_true_p": 0.0,
+      "survey_vs_dose_r": 0.5365787622358195,
+      "survey_vs_dose_p": 0.0,
+      "survey_true_mae": 0.5484338498191367,
+      "dose_true_mae": 0.5437512309064995,
+      "survey_dose_mae": 0.5596120685545803,
+      "avg_dose_items_total": 22.841,
+      "avg_survey_items": 24,
+      "item_reduction_pct": 4.829166666666662
+    },
+    "per_trait": {
+      "extraversion": {
+        "survey_vs_true_r": 0.7340994124851122,
+        "dose_vs_true_r": 0.7561440759247898,
+        "survey_vs_dose_r": 0.5530702136096597,
+        "survey_true_mae": 0.56640586362873,
+        "dose_true_mae": 0.5414830035819793,
+        "survey_dose_mae": 0.5673270861526795,
+        "avg_dose_items": 4.0,
+        "avg_dose_se": 0.6808302666935587,
+        "dose_items_dist": {
+          "1_item": 0,
+          "2_items": 0,
+          "3_items": 0,
+          "4_items": 1000
+        }
+      },
+      "agreeableness": {
+        "survey_vs_true_r": 0.7390050988071373,
+        "dose_vs_true_r": 0.758559453584573,
+        "survey_vs_dose_r": 0.5683666019201656,
+        "survey_true_mae": 0.5231068101014172,
+        "dose_true_mae": 0.5034039508609433,
+        "survey_dose_mae": 0.5508159382992899,
+        "avg_dose_items": 3.629,
+        "avg_dose_se": 0.6612569541218272,
+        "dose_items_dist": {
+          "1_item": 0,
+          "2_items": 0,
+          "3_items": 371,
+          "4_items": 629
+        }
+      },
+      "conscientiousness": {
+        "survey_vs_true_r": 0.691555901414718,
+        "dose_vs_true_r": 0.6624153976506699,
+        "survey_vs_dose_r": 0.48195243357445894,
+        "survey_true_mae": 0.5840826955091377,
+        "dose_true_mae": 0.6011666896753305,
+        "survey_dose_mae": 0.5566925061013747,
+        "avg_dose_items": 4.0,
+        "avg_dose_se": 0.7186888318144034,
+        "dose_items_dist": {
+          "1_item": 0,
+          "2_items": 0,
+          "3_items": 0,
+          "4_items": 1000
+        }
+      },
+      "neuroticism": {
+        "survey_vs_true_r": 0.6761797149203785,
+        "dose_vs_true_r": 0.6878685911744191,
+        "survey_vs_dose_r": 0.4839514079524375,
+        "survey_true_mae": 0.5565964967836368,
+        "dose_true_mae": 0.5566296024151692,
+        "survey_dose_mae": 0.5624733350843446,
+        "avg_dose_items": 4.0,
+        "avg_dose_se": 0.7138599442391727,
+        "dose_items_dist": {
+          "1_item": 0,
+          "2_items": 0,
+          "3_items": 0,
+          "4_items": 1000
+        }
+      },
+      "openness": {
+        "survey_vs_true_r": 0.7171666723912438,
+        "dose_vs_true_r": 0.7521354008439718,
+        "survey_vs_dose_r": 0.5285903236924787,
+        "survey_true_mae": 0.5640365067392507,
+        "dose_true_mae": 0.538712870751584,
+        "survey_dose_mae": 0.575391652067165,
+        "avg_dose_items": 3.93,
+        "avg_dose_se": 0.6885880257478452,
+        "dose_items_dist": {
+          "1_item": 0,
+          "2_items": 0,
+          "3_items": 70,
+          "4_items": 930
+        }
+      },
+      "honesty_humility": {
+        "survey_vs_true_r": 0.7819453202290017,
+        "dose_vs_true_r": 0.7523339133328161,
+        "survey_vs_dose_r": 0.5867990075752995,
+        "survey_true_mae": 0.4963747261526478,
+        "dose_true_mae": 0.5211112681539904,
+        "survey_dose_mae": 0.5449718936226284,
+        "avg_dose_items": 3.282,
+        "avg_dose_se": 0.6385680168489865,
+        "dose_items_dist": {
+          "1_item": 0,
+          "2_items": 183,
+          "3_items": 352,
+          "4_items": 465
+        }
+      }
+    }
+  }
+}

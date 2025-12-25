@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.env
+.venv/
+venv/
+ENV/
+
+# Node
+node_modules/
+.next/
+out/
+.npm
+
+# Database
+*.db
+data/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Build
+dist/
+build/
+*.egg-info/
+
+# Logs
+*.log
+logs/
+
+# Environment
+.env.local
+.env.production
+bin/
+lib/
+lib64/
+include/
+share/
+pyvenv.cfg
+__pycache__/
+*.pyc
+lib64
