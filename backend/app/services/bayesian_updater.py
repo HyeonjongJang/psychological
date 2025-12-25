@@ -16,6 +16,9 @@ from dataclasses import dataclass, field
 from .irt_engine import IRTEngine, irt_engine
 from ..core.mini_ipip6_data import MINI_IPIP6_ITEMS, TRAITS
 
+# NumPy 2.0 compatibility: trapz was renamed to trapezoid
+_trapz = np.trapezoid if hasattr(np, 'trapezoid') else np.trapz
+
 
 @dataclass
 class TraitState:
@@ -184,10 +187,7 @@ class BayesianUpdater:
         posterior = np.exp(log_posterior)
 
         # Normalize using trapezoidal integration
-        # Use np.trapezoid (NumPy 2.0+) with fallback to np.trapz (NumPy 1.x)
-        trapz_func = getattr(np, 'trapezoid', np.trapz)
-
-        normalizing_constant = trapz_func(posterior, self.theta_grid)
+        normalizing_constant = _trapz(posterior, self.theta_grid)
         if normalizing_constant > 0:
             posterior = posterior / normalizing_constant
         else:
@@ -195,13 +195,13 @@ class BayesianUpdater:
             posterior = np.array([
                 self.prior_density(theta) for theta in self.theta_grid
             ])
-            posterior = posterior / trapz_func(posterior, self.theta_grid)
+            posterior = posterior / _trapz(posterior, self.theta_grid)
 
         # Compute posterior mean
-        posterior_mean = trapz_func(posterior * self.theta_grid, self.theta_grid)
+        posterior_mean = _trapz(posterior * self.theta_grid, self.theta_grid)
 
         # Compute posterior variance and SD
-        posterior_var = trapz_func(
+        posterior_var = _trapz(
             posterior * (self.theta_grid - posterior_mean) ** 2,
             self.theta_grid
         )
