@@ -2,6 +2,11 @@
 
 import { useEffect, useState } from 'react';
 
+// API base URL for production/development
+const API_BASE = process.env.NEXT_PUBLIC_API_URL
+  ? `${process.env.NEXT_PUBLIC_API_URL}/api`
+  : '/api';
+
 interface DataSummary {
   total_participants: number;
   survey_completed: number;
@@ -22,7 +27,7 @@ export default function AdminPage() {
   useEffect(() => {
     async function fetchSummary() {
       try {
-        const response = await fetch('/api/export/summary');
+        const response = await fetch(`${API_BASE}/export/summary`);
         if (!response.ok) throw new Error('Failed to fetch summary');
         const data = await response.json();
         setSummary(data);
@@ -36,12 +41,12 @@ export default function AdminPage() {
   }, []);
 
   const handleDownloadCSV = () => {
-    window.location.href = '/api/export/participants/csv';
+    window.location.href = `${API_BASE}/export/participants/csv`;
   };
 
   const handleDownloadJSON = async () => {
     try {
-      const response = await fetch('/api/export/participants/json');
+      const response = await fetch(`${API_BASE}/export/participants/json`);
       const data = await response.json();
       const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
       const url = URL.createObjectURL(blob);
