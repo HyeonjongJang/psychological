@@ -7,7 +7,7 @@ import { useLanguage } from '@/context/LanguageContext';
 import { getItemText } from '@/lib/i18n';
 
 interface SurveyItem {
-  number: number;
+  item_number: number;
   text: string;
   trait: string;
 }
@@ -50,7 +50,7 @@ export default function SurveyPage() {
   const handleSubmit = async () => {
     if (!sessionId) return;
 
-    const unanswered = items.filter((item) => !responses[item.number]);
+    const unanswered = items.filter((item) => !responses[item.item_number]);
     if (unanswered.length > 0) {
       setError(language === 'kr'
         ? `아직 답변하지 않은 문항이 ${unanswered.length}개 있습니다. 모든 문항에 답변해 주시면 감사하겠습니다.`
@@ -161,30 +161,30 @@ export default function SurveyPage() {
         {/* Survey items */}
         <div className="space-y-6">
           {items.map((item) => {
-            const itemText = getItemText(item.number, language);
+            const itemText = getItemText(item.item_number, language);
             return (
               <div
-                key={item.number}
+                key={item.item_number}
                 className={`bg-white rounded-xl shadow-sm p-6 border-2 transition-colors ${
-                  responses[item.number]
+                  responses[item.item_number]
                     ? 'border-green-200'
                     : 'border-transparent'
                 }`}
               >
                 <div className="flex gap-4">
                   <span className="text-lg font-semibold text-gray-400">
-                    {item.number}.
+                    {item.item_number}.
                   </span>
                   <div className="flex-1">
                     <p className="text-lg text-gray-900 mb-4">{itemText}</p>
                     <div className="flex flex-wrap gap-2">
                       {t.likert.labels.map((label, index) => {
                         const value = index + 1;
-                        const isSelected = responses[item.number] === value;
+                        const isSelected = responses[item.item_number] === value;
                         return (
                           <button
                             key={value}
-                            onClick={() => handleResponseChange(item.number, value)}
+                            onClick={() => handleResponseChange(item.item_number, value)}
                             className={`px-3 py-2 text-sm rounded-lg border-2 transition-all ${
                               isSelected
                                 ? 'border-primary-500 bg-primary-50 text-primary-700 font-medium'
