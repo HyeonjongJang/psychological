@@ -43,15 +43,12 @@ build/
 *.log
 logs/
 
-# Environment
+# Environment (Python venv - use root level only)
 .env.local
 .env.production
-bin/
-lib/
-lib64/
-include/
-share/
+/bin/
+/lib/
+/lib64/
+/include/
+/share/
 pyvenv.cfg
-__pycache__/
-*.pyc
-lib64
