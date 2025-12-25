@@ -72,6 +72,7 @@ class AssessmentSession(Base):
     current_theta = Column(JSON, nullable=True)  # {trait: theta_value}
     current_se = Column(JSON, nullable=True)     # {trait: se_value}
     items_administered = Column(Integer, default=0)
+    dose_state = Column(JSON, nullable=True)     # Complete DOSE algorithm state for persistence
 
     # Natural chatbot specific
     conversation_state = Column(JSON, nullable=True)  # Chat history

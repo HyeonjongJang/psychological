@@ -35,10 +35,26 @@ class TraitState:
             "trait": self.trait,
             "theta_estimate": self.theta_estimate,
             "standard_error": self.standard_error,
-            "items_administered": len(self.items_used),
+            "posterior_mean": self.posterior_mean,
+            "posterior_sd": self.posterior_sd,
+            "responses": self.responses,
             "items_used": self.items_used,
             "total_information": self.total_information,
         }
+
+    @classmethod
+    def from_dict(cls, data: Dict) -> "TraitState":
+        """Reconstruct TraitState from dictionary."""
+        return cls(
+            trait=data["trait"],
+            theta_estimate=data["theta_estimate"],
+            standard_error=data["standard_error"],
+            posterior_mean=data.get("posterior_mean", data["theta_estimate"]),
+            posterior_sd=data.get("posterior_sd", data["standard_error"]),
+            responses=[tuple(r) for r in data.get("responses", [])],
+            items_used=data.get("items_used", []),
+            total_information=data.get("total_information", 0.0),
+        )
 
 
 class BayesianUpdater:

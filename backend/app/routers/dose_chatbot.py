@@ -21,13 +21,22 @@ from ..services.irt_engine import irt_engine
 
 router = APIRouter()
 
-# In-memory session state storage (in production, use Redis or database)
-_dose_states: dict[str, DOSESessionState] = {}
-
 
 def get_dose_algorithm() -> DOSEAlgorithm:
     """Dependency for DOSE algorithm."""
     return DOSEAlgorithm()
+
+
+def save_dose_state(session: AssessmentSession, dose_state: DOSESessionState) -> None:
+    """Save DOSE state to database session."""
+    session.dose_state = dose_state.to_dict()
+
+
+def load_dose_state(session: AssessmentSession) -> DOSESessionState:
+    """Load DOSE state from database session."""
+    if session.dose_state is None:
+        raise ValueError("No DOSE state found in session")
+    return DOSESessionState.from_dict(session.dose_state)
 
 
 @router.post("/{participant_id}/start", response_model=DOSEStartResponse)
@@ -79,15 +88,15 @@ async def start_dose_chatbot(
         current_se={trait: 1.0 for trait in TRAITS},
     )
 
+    # Get first action (which item to present)
+    action = dose.get_next_action(dose_state)
+
+    # Save DOSE state to database
+    save_dose_state(session, dose_state)
+
     db.add(session)
     await db.commit()
     await db.refresh(session)
-
-    # Store DOSE state
-    _dose_states[session.id] = dose_state
-
-    # Get first action (which item to present)
-    action = dose.get_next_action(dose_state)
 
     # Build response
     current_estimates = {
@@ -144,9 +153,10 @@ async def respond_dose_chatbot(
             detail="Session already completed"
         )
 
-    # Get DOSE state
-    dose_state = _dose_states.get(session_id)
-    if not dose_state:
+    # Load DOSE state from database
+    try:
+        dose_state = load_dose_state(session)
+    except ValueError:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
             detail="DOSE session state not found. Please restart the session."
@@ -255,8 +265,8 @@ async def respond_dose_chatbot(
         session.completed_at = datetime.utcnow()
         session.duration_seconds = duration
 
-        # Clean up state
-        del _dose_states[session_id]
+        # Clear the dose_state as it's no longer needed (results are saved)
+        session.dose_state = None
 
         await db.commit()
 
@@ -269,6 +279,9 @@ async def respond_dose_chatbot(
             stopping_reason=f"All traits estimated with sufficient precision (SE < {dose.se_threshold})",
         )
     else:
+        # Save updated DOSE state to database
+        save_dose_state(session, dose_state)
+
         await db.commit()
 
         return DOSERespondResponse(
@@ -302,8 +315,14 @@ async def get_dose_state(
             detail="Session not found"
         )
 
-    # Get DOSE state if available
-    dose_state = _dose_states.get(session_id)
+    # Load DOSE state from database if available
+    traits_completed = None
+    if session.dose_state:
+        try:
+            dose_state = load_dose_state(session)
+            traits_completed = dose_state.traits_completed
+        except (ValueError, KeyError):
+            pass
 
     return {
         "session_id": session_id,
@@ -311,6 +330,6 @@ async def get_dose_state(
         "items_administered": session.items_administered,
         "current_theta": session.current_theta,
         "current_se": session.current_se,
-        "traits_completed": dose_state.traits_completed if dose_state else None,
+        "traits_completed": traits_completed,
         "is_complete": session.status == SessionStatus.COMPLETED,
     }

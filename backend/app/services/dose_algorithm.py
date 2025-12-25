@@ -65,12 +65,15 @@ class DOSESessionState:
             },
             "traits_completed": self.traits_completed,
             "total_items": self.total_items,
+            "current_trait_index": self.current_trait_index,
             "administered_items": [
                 {
                     "item_number": h.item_number,
                     "trait": h.trait,
                     "response": h.response,
+                    "theta_before": h.theta_before,
                     "theta_after": h.theta_after,
+                    "se_before": h.se_before,
                     "se_after": h.se_after,
                     "fisher_information": h.fisher_information,
                     "presentation_order": h.presentation_order,
@@ -78,6 +81,37 @@ class DOSESessionState:
                 for h in self.administered_items
             ]
         }
+
+    @classmethod
+    def from_dict(cls, data: Dict) -> "DOSESessionState":
+        """Reconstruct DOSESessionState from dictionary."""
+        trait_states = {
+            trait: TraitState.from_dict(state_data)
+            for trait, state_data in data["trait_states"].items()
+        }
+
+        administered_items = [
+            ItemHistory(
+                item_number=h["item_number"],
+                trait=h["trait"],
+                response=h["response"],
+                theta_before=h.get("theta_before", 0.0),
+                theta_after=h["theta_after"],
+                se_before=h.get("se_before", 1.0),
+                se_after=h["se_after"],
+                fisher_information=h["fisher_information"],
+                presentation_order=h["presentation_order"],
+            )
+            for h in data.get("administered_items", [])
+        ]
+
+        return cls(
+            trait_states=trait_states,
+            administered_items=administered_items,
+            traits_completed=data["traits_completed"],
+            total_items=data["total_items"],
+            current_trait_index=data.get("current_trait_index", 0),
+        )
 
 
 class DOSEAlgorithm:
