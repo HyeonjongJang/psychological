@@ -184,7 +184,10 @@ class BayesianUpdater:
         posterior = np.exp(log_posterior)
 
         # Normalize using trapezoidal integration
-        normalizing_constant = np.trapz(posterior, self.theta_grid)
+        # Use np.trapezoid (NumPy 2.0+) with fallback to np.trapz (NumPy 1.x)
+        trapz_func = getattr(np, 'trapezoid', np.trapz)
+
+        normalizing_constant = trapz_func(posterior, self.theta_grid)
         if normalizing_constant > 0:
             posterior = posterior / normalizing_constant
         else:
@@ -192,13 +195,13 @@ class BayesianUpdater:
             posterior = np.array([
                 self.prior_density(theta) for theta in self.theta_grid
             ])
-            posterior = posterior / np.trapz(posterior, self.theta_grid)
+            posterior = posterior / trapz_func(posterior, self.theta_grid)
 
         # Compute posterior mean
-        posterior_mean = np.trapz(posterior * self.theta_grid, self.theta_grid)
+        posterior_mean = trapz_func(posterior * self.theta_grid, self.theta_grid)
 
         # Compute posterior variance and SD
-        posterior_var = np.trapz(
+        posterior_var = trapz_func(
             posterior * (self.theta_grid - posterior_mean) ** 2,
             self.theta_grid
         )
