@@ -154,6 +154,7 @@ def compare_scores(
         Comparison statistics
     """
     import numpy as np
+    import math
 
     traits = list(set(scores1.keys()) & set(scores2.keys()))
 
@@ -163,18 +164,26 @@ def compare_scores(
     s1 = np.array([scores1[t] for t in traits])
     s2 = np.array([scores2[t] for t in traits])
 
-    # Calculate correlation
+    # Calculate correlation (handle NaN when variance is zero)
     correlation = np.corrcoef(s1, s2)[0, 1]
+    if math.isnan(correlation) or math.isinf(correlation):
+        correlation = 0.0  # Default to 0 when correlation can't be computed
 
     # Calculate differences
     diffs = s1 - s2
     mae = np.mean(np.abs(diffs))
     rmse = np.sqrt(np.mean(diffs ** 2))
 
+    # Ensure no NaN/Inf values in output
+    def safe_float(val):
+        if math.isnan(val) or math.isinf(val):
+            return 0.0
+        return float(val)
+
     return {
         "traits_compared": traits,
-        "correlation": float(correlation),
-        "mae": float(mae),
-        "rmse": float(rmse),
-        "differences": {t: float(s1[i] - s2[i]) for i, t in enumerate(traits)},
+        "pearson_r": safe_float(correlation),  # Frontend expects "pearson_r"
+        "mean_absolute_error": safe_float(mae),  # Frontend expects "mean_absolute_error"
+        "rmse": safe_float(rmse),
+        "trait_differences": {t: safe_float(s1[i] - s2[i]) for i, t in enumerate(traits)},
     }
